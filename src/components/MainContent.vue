@@ -25,6 +25,9 @@ export default {
     <PersonalInfo />
 </template>
 
-<style scoped lang="sass">
-
+<style scoped lang="scss">
+h1 {
+    width: 100%;
+    text-align: center;
+}
 </style>
