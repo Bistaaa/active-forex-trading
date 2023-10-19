@@ -19,7 +19,7 @@ export default {
         <!-- NAV -->
         <div id="nav-container">
             <div id="nav-logo">
-                <img src="../assets/img/6.png" alt="">
+                <img src="../assets/img/logo.png" alt="">
             </div>
             <div id="nav-menu">
                 <span class="nav-link">La Strategia</span>
@@ -30,14 +30,10 @@ export default {
                 <span class="nav-link">Contatti</span>
             </div>
             <div id="vip-button-container">
-                <button class="vip-button">
-                    <span>Click!</span>
-                    <span>Sblocca gratis l'accesso <br> al canale Elite</span>
-                </button>
-                <!-- <button class="custom-btn btn-12">
-                    <span>Click!</span>
-                    <span>Read More</span>
-                </button> -->
+                <div class="vip-button b05_3d_roll">
+                    <div>Click!</div>
+                    <div>Sblocca gratis l'accesso</div>
+                </div>
             </div>
         </div>
 
@@ -58,7 +54,7 @@ export default {
         background-color: #ECC01B;
 
         #nav-logo {
-            height: 95%;
+            height: 80%;
             width: 20%;
             display: flex;
             justify-content: center;
@@ -110,125 +106,94 @@ export default {
             justify-content: center;
             width: 20%;
 
-            /* #vip-button {
-                width: auto;
-                padding: 10px 20px;
-                background-color: #2FA9DA;
-                color: #ffffff;
-                border: none;
-                cursor: pointer;
-                border-radius: 20px;
-
-                &:hover {
-                    background-color: #FFA500;
-                    color: #000000;
-                }
-
-                &:active {
-                    background-color: #FFD700;
-                    color: #000000;
-                }
-
-                p {
-                    font-size: 17px;
-                }
-            } */
-
-            /* .custom-btn {
-                width: 130px;
-                height: 40px;
-                color: #fff;
-                border-radius: 5px;
-                padding: 10px 25px;
-                font-family: 'Lato', sans-serif;
-                font-weight: 500;
-                background: transparent;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                position: relative;
-                display: inline-block;
-                box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-                    7px 7px 20px 0px rgba(0, 0, 0, .1),
-                    4px 4px 5px 0px rgba(0, 0, 0, .1);
-                outline: none;
-            } */
-
             .vip-button {
-                position: relative;
-                right: 20px;
-                bottom: 20px;
-                border: none;
-                box-shadow: none;
-                width: 230px;
-                height: 60px;
-                line-height: 20px;
-                -webkit-perspective: 230px;
-                perspective: 230px;
-                background: transparent;
-                color: #ffffff;
-                font-size: 18px;
-            }
-
-            .vip-button span {
-                background: rgb(0, 172, 238);
-                background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
-                display: block;
-                position: absolute;
-                width: 230px;
-                height: 40px;
-                box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-                    7px 7px 20px 0px rgba(0, 0, 0, .1),
-                    4px 4px 5px 0px rgba(0, 0, 0, .1);
-                border-radius: 5px;
                 margin: 0;
+                border: 0;
+                font-size: 22px;
+                position: relative;
+                width: 300px;
+                height: 50px;
                 text-align: center;
+                box-sizing: border-box;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                -webkit-transition: all .3s;
-                transition: all .3s;
+                -webkit-user-select: none;
+                cursor: default;
+                perspective: 500px;
+                -webkit-perspective: 500px;
+                -moz-perspective: 500px;
             }
 
-            .vip-button span:nth-child(1) {
-                box-shadow:
-                    -7px -7px 20px 0px #fff9,
-                    -4px -4px 5px 0px #fff9,
-                    7px 7px 20px 0px #0002,
-                    4px 4px 5px 0px #0001;
+            .vip-button:hover {
+                cursor: pointer;
+            }
+
+            .b05_3d_roll {
+                perspective: 500px;
+                -webkit-perspective: 500px;
+                -moz-perspective: 500px;
+            }
+
+            .b05_3d_roll div {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 50px;
+                padding: 10px;
+                border: #000000 solid 1px;
+                pointer-events: none;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+
+            .b05_3d_roll div:nth-child(1) {
+                color: #000000;
+                background-color: #000000;
+                transform: rotateX(90deg);
                 -webkit-transform: rotateX(90deg);
                 -moz-transform: rotateX(90deg);
-                transform: rotateX(90deg);
-                -webkit-transform-origin: 50% 50% -20px;
-                -moz-transform-origin: 50% 50% -20px;
-                transform-origin: 50% 50% -20px;
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform-origin: 50% 50% -25px;
+                -webkit-transform-origin: 50% 50% -25px;
+                -moz-transform-origin: 50% 50% -25px;
             }
 
-            .vip-button span:nth-child(2) {
+            .b05_3d_roll div:nth-child(2) {
+                color: #ffffff;
+                background-color: #2FA9DA;
+                transform: rotateX(0deg);
                 -webkit-transform: rotateX(0deg);
                 -moz-transform: rotateX(0deg);
-                transform: rotateX(0deg);
-                -webkit-transform-origin: 50% 50% -20px;
-                -moz-transform-origin: 50% 50% -20px;
-                transform-origin: 50% 50% -20px;
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform-origin: 50% 50% -25px;
+                -webkit-transform-origin: 50% 50% -25px;
+                -moz-transform-origin: 50% 50% -25px;
             }
 
-            .vip-button:hover span:nth-child(1) {
-                box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-                    7px 7px 20px 0px rgba(0, 0, 0, .1),
-                    4px 4px 5px 0px rgba(0, 0, 0, .1);
+            .b05_3d_roll:hover div:nth-child(1) {
+                color: #ffffff;
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform: rotateX(0deg);
                 -webkit-transform: rotateX(0deg);
                 -moz-transform: rotateX(0deg);
-                transform: rotateX(0deg);
             }
 
-            .vip-button:hover span:nth-child(2) {
-                box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-                    7px 7px 20px 0px rgba(0, 0, 0, .1),
-                    4px 4px 5px 0px rgba(0, 0, 0, .1);
-                color: transparent;
+            .b05_3d_roll:hover div:nth-child(2) {
+                background-color: #000000;
+                color: #000000;
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform: rotateX(-90deg);
                 -webkit-transform: rotateX(-90deg);
                 -moz-transform: rotateX(-90deg);
-                transform: rotateX(-90deg);
             }
         }
     }
