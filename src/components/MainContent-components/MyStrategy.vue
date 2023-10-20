@@ -13,49 +13,43 @@ export default {
 <template>
     <div id="mystrategy-container">
         <div id="mystrategy-content-container">
-            <h2>La nostra strategia vincente</h2>
+            <h2>LA NOSTRA STRATEGIA VINCENTE</h2>
             <div id="strategy-description-container">
-                <div id="upper-container">
-                    <div class="neon-border" id="upper-container-left">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <h3>“STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI”:</h3>
-                        <p>Significa che anche se prendiamo qualche stop-loss non ci fanno male perché sono stoppati sul
-                            nascere
-                            impostandoli davvero corti in zone “magiche” del grafico che nel mio corso insegno a riconoscere
-                            ed
-                            individuare; allo stesso tempo mettiamo dei <b>“take-profit” medio-lunghi</b>: in tal modo con
-                            il
-                            primo
-                            trade che parte nella direzione giusta lo lasciamo correre e andiamo velocemente a recuperare le
-                            piccole
-                            perdite subite andando in GAIN.</p>
-                    </div>
-                    <div id="upper-container-right"></div>
+                <div class="neon-border" id="left-description-container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <h3>STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI</h3>
+                    <p>Significa che anche se prendiamo qualche stop-loss non ci fanno male perché sono stoppati sul
+                        nascere
+                        impostandoli davvero corti in zone “magiche” del grafico che nel mio corso insegno a riconoscere
+                        ed
+                        individuare; allo stesso tempo mettiamo dei <b>“take-profit” medio-lunghi</b>: in tal modo con
+                        il
+                        primo
+                        trade che parte nella direzione giusta lo lasciamo correre e andiamo velocemente a recuperare le
+                        piccole
+                        perdite subite andando in GAIN.</p>
                 </div>
-                <div id="bottom-container">
-                    <div id="bottom-container-left"></div>
-                    <div class="neon-border" id="bottom-container-right">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <h3>Unica strategia adatta ANCHE a conti medio piccoli</h3>
-                        <p>perché ha draw-down impercettibili che non fanno bruciare il conto proprio perché utilizzo
-                            stop-loss
-                            stretti: la gente si fa incantare su Istagram dove sulle storie vengono mostrati “SCREEN” com
-                            mega
-                            risultati di trading che in effetti sono veri ma realizzati da chi ha conti da 100.000 euro in
-                            su
-                            dove
-                            non usano STOP-LOSS: cosa succede? Semplice: loro possono tenere tante posizioni aperte anche in
-                            forte
-                            perdita, ma i piccoli trader che hanno conti medio/piccoli che provano ad utilizzare la loro
-                            strategia
-                            BRUCIANO I LORO CONTI E PERDONO TUTTO perché non reggono il forte draw-down.</p>
-                    </div>
+                <div class="neon-border" id="right-description-container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <h3>UNICA STRATEGIA ADATTA ANCHE A CONTI MEDIO PICCOLI</h3>
+                    <p>perché ha draw-down impercettibili che non fanno bruciare il conto proprio perché utilizzo
+                        stop-loss
+                        stretti: la gente si fa incantare su Istagram dove sulle storie vengono mostrati “SCREEN” com
+                        mega
+                        risultati di trading che in effetti sono veri ma realizzati da chi ha conti da 100.000 euro in
+                        su
+                        dove
+                        non usano STOP-LOSS: cosa succede? Semplice: loro possono tenere tante posizioni aperte anche in
+                        forte
+                        perdita, ma i piccoli trader che hanno conti medio/piccoli che provano ad utilizzare la loro
+                        strategia
+                        BRUCIANO I LORO CONTI E PERDONO TUTTO perché non reggono il forte draw-down.</p>
                 </div>
             </div>
             <div class="button-container">
@@ -82,83 +76,60 @@ export default {
 
         h2 {
             text-align: center;
-            font-size: 50px;
+            font-size: 60px;
             margin-bottom: 150px;
             color: #000000;
         }
 
         #strategy-description-container {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 100px;
+            width: 100%;
 
-            #upper-container {
+            #left-description-container {
                 display: flex;
-                flex-direction: row;
-                margin-bottom: 50px;
-                width: 100%;
+                flex-direction: column;
+                width: 40%;
+                padding: 40px 25px;
+                transition: transform 0.3s;
 
-                #upper-container-left {
-                    display: flex;
-                    flex-direction: column;
-                    width: 40%;
-                    padding: 40px 25px;
-                    transition: transform 0.3s;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-
-                    h3 {
-                        font-size: 30px;
-                        text-align: center;
-                        margin-bottom: 30px;
-                    }
-
-                    p {
-                        font-size: 20px;
-                        text-align: center;
-                    }
+                &:hover {
+                    transform: scale(1.1);
                 }
 
-                #upper-container-right {
-                    width: 60%;
-                    height: 100%;
+                h3 {
+                    font-size: 35px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 23px;
+                    text-align: justify;
                 }
             }
 
-            #bottom-container {
+            #right-description-container {
                 display: flex;
-                flex-direction: row;
-                margin-bottom: 50px;
-                width: 100%;
+                flex-direction: column;
+                width: 40%;
+                padding: 40px 25px;
+                transition: transform 0.3s;
 
-                #bottom-container-left {
-                    width: 60%;
-                    height: 100%;
+                &:hover {
+                    transform: scale(1.1);
                 }
 
-                #bottom-container-right {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 50px;
-                    width: 40%;
-                    padding: 40px 25px;
-                    transition: transform 0.3s;
+                h3 {
+                    font-size: 35px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
 
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-
-                    h3 {
-                        font-size: 30px;
-                        text-align: center;
-                        margin-bottom: 30px;
-                    }
-
-                    p {
-                        font-size: 20px;
-                        text-align: center;
-                    }
+                p {
+                    font-size: 23px;
+                    text-align: justify;
                 }
             }
         }

@@ -1,218 +1,223 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Oswald', sans-serif;
+  }
+
+
+
+  ///////////////////////////
+  //BUTTONS
+  ///////////////////////////
+
+  .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 80px;
+  }
+
+  .vip-button {
+      margin: 0;
+      border: 0;
+      font-size: 22px;
+      position: relative;
+      width: 340px;
+      height: 50px;
+      text-align: center;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-user-select: none;
+      cursor: default;
+      perspective: 500px;
+      -webkit-perspective: 500px;
+      -moz-perspective: 500px;
+  }
+
+  .vip-button:hover {
+      cursor: pointer;
+  }
+
+  .b05_3d_roll {
+      perspective: 500px;
+      -webkit-perspective: 500px;
+      -moz-perspective: 500px;
+  }
+
+  .b05_3d_roll div {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+      border: #000000 solid 2px;
+      text-transform: uppercase;
+      pointer-events: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+  }
+
+  .b05_3d_roll div:nth-child(1) {
+      color: #000000;
+      background-color: #000000;
+      transform: rotateX(90deg);
+      -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b05_3d_roll div:nth-child(2) {
+      color: #ffffff;
+      background-color: #2FA9DA;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b05_3d_roll:hover div:nth-child(1) {
+      color: #ffffff;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+  }
+
+  .b05_3d_roll:hover div:nth-child(2) {
+      background-color: #000000;
+      color: #000000;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(-90deg);
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+  }
 
 
 
 
-///////////////////////////
-//BUTTONS
-///////////////////////////
+  ///////////////////////////
+  //NEON BORDER
+  ///////////////////////////
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-}
+  .neon-border {
+      position: relative;
+      transition: 0.5s;
+      overflow: hidden;
+  }
 
-.vip-button {
-    margin: 0;
-    border: 0;
-    font-size: 22px;
-    position: relative;
-    width: 340px;
-    height: 50px;
-    text-align: center;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-user-select: none;
-    cursor: default;
-    perspective: 500px;
-    -webkit-perspective: 500px;
-    -moz-perspective: 500px;
-}
+  .neon-border:hover {
+      box-shadow: 0 0 5px #000000,
+          /* 0 0 25px #000000, */
+          0 0 75px #000000,
+          /* 0 0 200px #000000; */
+  }
 
-.vip-button:hover {
-    cursor: pointer;
-}
+  .neon-border span {
+      position: absolute;
+      display: block;
+  }
 
-.b05_3d_roll {
-    perspective: 500px;
-    -webkit-perspective: 500px;
-    -moz-perspective: 500px;
-}
+  .neon-border span:nth-child(1) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #000000);
+      animation: animate1 1s linear infinite;
+  }
 
-.b05_3d_roll div {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border: #000000 solid 2px;
-    text-transform: uppercase;
-    pointer-events: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
+  @keyframes animate1 {
+      0% {
+          left: -100%;
+      }
 
-.b05_3d_roll div:nth-child(1) {
-    color: #000000;
-    background-color: #000000;
-    transform: rotateX(90deg);
-    -webkit-transform: rotateX(90deg);
-    -moz-transform: rotateX(90deg);
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform-origin: 50% 50% -25px;
-    -webkit-transform-origin: 50% 50% -25px;
-    -moz-transform-origin: 50% 50% -25px;
-}
+      50%,
+      100% {
+          left: 100%;
+      }
+  }
 
-.b05_3d_roll div:nth-child(2) {
-    color: #ffffff;
-    background-color: #2FA9DA;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform-origin: 50% 50% -25px;
-    -webkit-transform-origin: 50% 50% -25px;
-    -moz-transform-origin: 50% 50% -25px;
-}
+  .neon-border span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #000000);
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+  }
 
-.b05_3d_roll:hover div:nth-child(1) {
-    color: #ffffff;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-}
+  @keyframes animate2 {
+      0% {
+          top: -100%;
+      }
 
-.b05_3d_roll:hover div:nth-child(2) {
-    background-color: #000000;
-    color: #000000;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform: rotateX(-90deg);
-    -webkit-transform: rotateX(-90deg);
-    -moz-transform: rotateX(-90deg);
-}
+      50%,
+      100% {
+          top: 100%;
+      }
+  }
+
+  .neon-border span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(270deg, transparent, #000000);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.50s;
+  }
+
+  @keyframes animate3 {
+      0% {
+          right: -100%;
+      }
+
+      50%,
+      100% {
+          right: 100%;
+      }
+  }
 
 
+  .neon-border span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #000000);
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+  }
 
+  @keyframes animate4 {
+      0% {
+          bottom: -100%;
+      }
 
-///////////////////////////
-//NEON BORDER
-///////////////////////////
-
-.neon-border {
-    position: relative;
-    transition: 0.5s;
-    overflow: hidden;
-}
-
-.neon-border:hover {
-    box-shadow: 0 0 5px #000000,
-        /* 0 0 25px #000000, */
-        0 0 75px #000000,
-        /* 0 0 200px #000000; */
-}
-
-.neon-border span {
-    position: absolute;
-    display: block;
-}
-
-.neon-border span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #000000);
-    animation: animate1 1s linear infinite;
-}
-
-@keyframes animate1 {
-    0% {
-        left: -100%;
-    }
-
-    50%,
-    100% {
-        left: 100%;
-    }
-}
-
-.neon-border span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #000000);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-
-@keyframes animate2 {
-    0% {
-        top: -100%;
-    }
-
-    50%,
-    100% {
-        top: 100%;
-    }
-}
-
-.neon-border span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(270deg, transparent, #000000);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-
-@keyframes animate3 {
-    0% {
-        right: -100%;
-    }
-
-    50%,
-    100% {
-        right: 100%;
-    }
-}
-
-
-.neon-border span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #000000);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-
-@keyframes animate4 {
-    0% {
-        bottom: -100%;
-    }
-
-    50%,
-    100% {
-        bottom: 100%;
-    }
-}
+      50%,
+      100% {
+          bottom: 100%;
+      }
+  }
