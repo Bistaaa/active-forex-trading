@@ -19,15 +19,15 @@ export default {
 </script>
 
 <template>
-    <h1>hello i'm the Main</h1>
-    <Instructions />
-    <MyStrategy />
-    <PersonalInfo />
+    <div id="main-container">
+        <Instructions />
+        <MyStrategy />
+        <PersonalInfo />
+    </div>
 </template>
 
 <style scoped lang="scss">
-h1 {
-    width: 100%;
-    text-align: center;
+#main-container {
+    padding: 100px 10%;
 }
 </style>
