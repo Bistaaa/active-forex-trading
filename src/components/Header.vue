@@ -32,7 +32,7 @@ export default {
             <div id="vip-button-container">
                 <div class="vip-button b05_3d_roll">
                     <div>Click!</div>
-                    <div>Sblocca gratis l'accesso</div>
+                    <div>Sblocca gratis Gruppo VIP</div>
                 </div>
             </div>
         </div>
@@ -106,95 +106,7 @@ export default {
             justify-content: center;
             width: 20%;
 
-            .vip-button {
-                margin: 0;
-                border: 0;
-                font-size: 22px;
-                position: relative;
-                width: 300px;
-                height: 50px;
-                text-align: center;
-                box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -webkit-user-select: none;
-                cursor: default;
-                perspective: 500px;
-                -webkit-perspective: 500px;
-                -moz-perspective: 500px;
-            }
 
-            .vip-button:hover {
-                cursor: pointer;
-            }
-
-            .b05_3d_roll {
-                perspective: 500px;
-                -webkit-perspective: 500px;
-                -moz-perspective: 500px;
-            }
-
-            .b05_3d_roll div {
-                position: absolute;
-                text-align: center;
-                width: 100%;
-                height: 50px;
-                padding: 10px;
-                border: #000000 solid 1px;
-                pointer-events: none;
-                box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-            }
-
-            .b05_3d_roll div:nth-child(1) {
-                color: #000000;
-                background-color: #000000;
-                transform: rotateX(90deg);
-                -webkit-transform: rotateX(90deg);
-                -moz-transform: rotateX(90deg);
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform-origin: 50% 50% -25px;
-                -webkit-transform-origin: 50% 50% -25px;
-                -moz-transform-origin: 50% 50% -25px;
-            }
-
-            .b05_3d_roll div:nth-child(2) {
-                color: #ffffff;
-                background-color: #2FA9DA;
-                transform: rotateX(0deg);
-                -webkit-transform: rotateX(0deg);
-                -moz-transform: rotateX(0deg);
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform-origin: 50% 50% -25px;
-                -webkit-transform-origin: 50% 50% -25px;
-                -moz-transform-origin: 50% 50% -25px;
-            }
-
-            .b05_3d_roll:hover div:nth-child(1) {
-                color: #ffffff;
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform: rotateX(0deg);
-                -webkit-transform: rotateX(0deg);
-                -moz-transform: rotateX(0deg);
-            }
-
-            .b05_3d_roll:hover div:nth-child(2) {
-                background-color: #000000;
-                color: #000000;
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform: rotateX(-90deg);
-                -webkit-transform: rotateX(-90deg);
-                -moz-transform: rotateX(-90deg);
-            }
         }
     }
 }
