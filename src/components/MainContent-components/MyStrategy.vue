@@ -15,22 +15,36 @@ export default {
         <h2>La nostra strategia vincente</h2>
         <div id="strategy-description-container">
             <div id="upper-container">
-                <h3>Cosa mi DISTINGUE dagli altri: la mia strategia che insegno che si basa sul motto
-                    “STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI”:</h3>
-                <p>Significa che anche se prendiamo qualche stop-loss non ci fanno male perché sono stoppati sul nascere
-                    impostandoli davvero corti in zone “magiche” del grafico che nel mio corso insegno a riconoscere ed
-                    individuare; allo stesso tempo mettiamo dei <b>“take-profit” medio-lunghi</b>: in tal modo con il primo
-                    trade che parte nella direzione giusta lo lasciamo correre e andiamo velocemente a recuperare le piccole
-                    perdite subite andando in GAIN.</p>
+                <div id="upper-container-left">
+                    <h3>“STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI”:</h3>
+                    <p>Significa che anche se prendiamo qualche stop-loss non ci fanno male perché sono stoppati sul nascere
+                        impostandoli davvero corti in zone “magiche” del grafico che nel mio corso insegno a riconoscere ed
+                        individuare; allo stesso tempo mettiamo dei <b>“take-profit” medio-lunghi</b>: in tal modo con il
+                        primo
+                        trade che parte nella direzione giusta lo lasciamo correre e andiamo velocemente a recuperare le
+                        piccole
+                        perdite subite andando in GAIN.</p>
+                </div>
+                <div id="upper-container-right"></div>
             </div>
             <div id="bottom-container">
-                <h3>Unica strategia adatta ANCHE a conti medio piccoli</h3>
-                <p>perché ha draw-down impercettibili che non fanno bruciare il conto proprio perché utilizzo stop-loss
-                    stretti: la gente si fa incantare su Istagram dove sulle storie vengono mostrati “SCREEN” com mega
-                    risultati di trading che in effetti sono veri ma realizzati da chi ha conti da 100.000 euro in su dove
-                    non usano STOP-LOSS: cosa succede? Semplice: loro possono tenere tante posizioni aperte anche in forte
-                    perdita, ma i piccoli trader che hanno conti medio/piccoli che provano ad utilizzare la loro strategia
-                    BRUCIANO I LORO CONTI E PERDONO TUTTO perché non reggono il forte draw-down.</p>
+                <div id="bottom-container-left"></div>
+                <div class="neon-border" id="bottom-container-right">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <h3>Unica strategia adatta ANCHE a conti medio piccoli</h3>
+                    <p>perché ha draw-down impercettibili che non fanno bruciare il conto proprio perché utilizzo stop-loss
+                        stretti: la gente si fa incantare su Istagram dove sulle storie vengono mostrati “SCREEN” com mega
+                        risultati di trading che in effetti sono veri ma realizzati da chi ha conti da 100.000 euro in su
+                        dove
+                        non usano STOP-LOSS: cosa succede? Semplice: loro possono tenere tante posizioni aperte anche in
+                        forte
+                        perdita, ma i piccoli trader che hanno conti medio/piccoli che provano ad utilizzare la loro
+                        strategia
+                        BRUCIANO I LORO CONTI E PERDONO TUTTO perché non reggono il forte draw-down.</p>
+                </div>
             </div>
         </div>
         <div class="button-container">
@@ -45,52 +59,90 @@ export default {
 <style scoped lang="scss">
 #mystrategy-container {
     padding: 100px 10%;
+    background-color: #000000;
 
     h2 {
         text-align: center;
         font-size: 50px;
         margin-bottom: 150px;
+        color: #ffffff;
     }
 
     #strategy-description-container {
         display: flex;
         flex-direction: column;
+        color: #ffffff;
 
         #upper-container {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            flex-direction: row;
             margin-bottom: 50px;
+            width: 100%;
 
-            h3 {
-                font-size: 30px;
+            #upper-container-left {
+                display: flex;
+                flex-direction: column;
                 width: 40%;
-                text-align: center;
+                border: 3px dotted #ffffff;
+                border-radius: 30px;
+                padding: 40px 25px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                h3 {
+                    font-size: 30px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
             }
 
-            p {
-                font-size: 20px;
-                width: 40%;
-                text-align: center;
+            #upper-container-right {
+                width: 60%;
+                height: 100%;
             }
         }
 
         #bottom-container {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            flex-direction: row;
             margin-bottom: 50px;
+            width: 100%;
 
-            h3 {
-                font-size: 30px;
-                width: 40%;
-                text-align: center;
+            #bottom-container-left {
+                width: 60%;
+                height: 100%;
             }
 
-            p {
-                font-size: 20px;
+            #bottom-container-right {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
                 width: 40%;
-                text-align: center;
+                padding: 40px 25px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                h3 {
+                    font-size: 30px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
             }
         }
     }
