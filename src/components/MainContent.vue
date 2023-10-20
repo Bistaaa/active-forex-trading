@@ -27,7 +27,5 @@ export default {
 </template>
 
 <style scoped lang="scss">
-#main-container {
-    padding: 100px 10%;
-}
+#main-container {}
 </style>

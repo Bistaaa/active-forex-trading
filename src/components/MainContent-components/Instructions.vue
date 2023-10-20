@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div id="instruction-container">
-        <h2>STEP NECESSARI</h2>
+        <h2 class="underlined">STEP NECESSARI</h2>
         <div id="steps-container">
             <div class="steps-column">
                 <h3>Compila il form</h3>
@@ -32,12 +32,20 @@ export default {
                 <span>Sei dentro! Approfitta di tutti i servizi gratuiti che offriamo!</span>
             </div>
         </div>
+        <div class="button-container">
+            <div class="vip-button b05_3d_roll">
+                <div>Click!</div>
+                <div>Sblocca gratis Gruppo VIP</div>
+            </div>
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 #instruction-container {
     margin-bottom: 100px;
+    background-color: #ECC01B;
+    padding: 100px 10%;
 
     h2 {
         font-size: 60px;
@@ -74,6 +82,12 @@ export default {
             display: flex;
             justify-content: center;
         }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
     }
 }
 </style>
