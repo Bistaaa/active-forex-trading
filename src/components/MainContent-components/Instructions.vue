@@ -18,14 +18,18 @@ export default {
                 <span>Compila il form lasciando i tuoi dati di contatto e scarica l'E-book</span>
             </div>
             <div class="arrow-container">
-                <font-awesome-icon icon="fa-solid fa-arrow-right right-arrow" />
+                <span class="right-arrow">
+                    <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+                </span>
             </div>
             <div class="steps-column">
                 <h3>Call conoscitiva</h3>
                 <span>Ti contattiamo per illustrarti il servizio, come accedere e rispondere alle tue domande </span>
             </div>
             <div class="arrow-container">
-                <font-awesome-icon icon="fa-solid fa-arrow-right right-arrow" />
+                <span class="right-arrow">
+                    <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+                </span>
             </div>
             <div class="steps-column">
                 <h3>Accedi al gruppo privato "Elite"</h3>
@@ -47,26 +51,31 @@ export default {
     padding: 100px 10%;
 
     h2 {
-        font-size: 60px;
+        font-size: 65px;
         text-align: center;
+        text-decoration: underline;
+        margin-bottom: 100px;
     }
 
     #steps-container {
-        margin-top: 50px;
         display: flex;
-        align-items: center;
-
+        align-items: flex-start;
+        margin-bottom: 50px;
 
         .steps-column {
-            width: 20%;
+            width: 22%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
+            padding: 20px 0;
+            border-top: 4px dotted #000000;
+            border-bottom: 4px dotted #000000;
 
             h3 {
                 font-size: 45px;
                 text-align: center;
+                line-height: 50px;
             }
 
             span {
@@ -76,10 +85,16 @@ export default {
         }
 
         .arrow-container {
-            width: 20%;
+            width: 17%;
+            height: 100%;
             font-size: 70px;
             display: flex;
             justify-content: center;
+
+            .right-arrow {
+                height: 100%;
+                padding-top: 30px;
+            }
         }
     }
 }
