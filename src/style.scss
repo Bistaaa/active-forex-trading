@@ -11,6 +11,12 @@
 //BUTTONS
 ///////////////////////////
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
 .vip-button {
     margin: 0;
     border: 0;
@@ -101,11 +107,3 @@
     -webkit-transform: rotateX(-90deg);
     -moz-transform: rotateX(-90deg);
 }
-
-
-
-
-
-///////////////////////////
-//BUTTONS
-///////////////////////////

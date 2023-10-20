@@ -43,7 +43,6 @@ export default {
 
 <style scoped lang="scss">
 #instruction-container {
-    margin-bottom: 100px;
     background-color: #ECC01B;
     padding: 100px 10%;
 
@@ -82,12 +81,6 @@ export default {
             display: flex;
             justify-content: center;
         }
-    }
-
-    .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 80px;
     }
 }
 </style>
