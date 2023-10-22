@@ -29,11 +29,8 @@ export default {
                 <span class="nav-link">FAQ</span>
                 <span class="nav-link">Contatti</span>
             </div>
-            <div id="vip-button-container">
-                <div class="vip-button b05_3d_roll">
-                    <div>Click!</div>
-                    <div>Sblocca gratis Gruppo VIP</div>
-                </div>
+            <div id="vip-button-container-header">
+                <button class="vip-button">Sblocca gratis Gruppo VIP</button>
             </div>
         </div>
 
@@ -73,7 +70,7 @@ export default {
 
             .nav-link {
                 color: #000000;
-                font-size: 20px;
+                font-size: 22px;
                 text-transform: uppercase;
                 cursor: pointer;
                 position: relative;
@@ -101,12 +98,52 @@ export default {
             }
         }
 
-        #vip-button-container {
+        #vip-button-container-header {
             display: flex;
             justify-content: center;
             width: 20%;
 
+            .vip-button {
+                cursor: pointer;
+                position: relative;
+                padding: 10px 24px;
+                font-size: 25px;
+                color: #ffffff;
+                border: 2px solid #ffffff;
+                border-radius: 34px;
+                background-color: #2FA9DA;
+                font-weight: 600;
+                transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+                overflow: hidden;
+            }
 
+            .vip-button::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                width: 200px;
+                height: 100px;
+                border-radius: inherit;
+                scale: 0;
+                z-index: -1;
+                background-color: #000000;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+            }
+
+            .vip-button:hover::before {
+                scale: 3;
+            }
+
+            .vip-button:hover {
+                color: #ffffff;
+                scale: 1.1;
+                box-shadow: 0 0px 20px #000000;
+            }
+
+            .vip-button:active {
+                scale: 1;
+            }
         }
     }
 }

@@ -40,11 +40,8 @@ export default {
                     </p>
                 </div>
             </div>
-            <div class="button-container">
-                <div class="vip-button b05_3d_roll">
-                    <div>Click!</div>
-                    <div>Sblocca gratis Gruppo VIP</div>
-                </div>
+            <div class="vip-button-container">
+                <button class="vip-button">Sblocca gratis Gruppo VIP</button>
             </div>
         </div>
     </div>
