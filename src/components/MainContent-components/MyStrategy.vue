@@ -21,16 +21,11 @@ export default {
                     <span></span>
                     <span></span>
                     <h3>STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI</h3>
-                    <p>Significa che anche se prendiamo qualche stop-loss non ci fanno male perché sono stoppati sul
-                        nascere
-                        impostandoli davvero corti in zone “magiche” del grafico che nel mio corso insegno a riconoscere
-                        ed
-                        individuare; allo stesso tempo mettiamo dei <b>“take-profit” medio-lunghi</b>: in tal modo con
-                        il
-                        primo
-                        trade che parte nella direzione giusta lo lasciamo correre e andiamo velocemente a recuperare le
-                        piccole
-                        perdite subite andando in GAIN.</p>
+                    <p>La nostra strategia si basa sul motto "STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI".
+                        Impostiamo trade con stop-loss stretti in punti chiave del grafico e take profit medio-lunghi.
+                        Questo ci permette di bloccare le perdite e andare in positivo con la prima operazione che parte
+                        nella direzione giusta.
+                    </p>
                 </div>
                 <div class="neon-border" id="right-description-container">
                     <span></span>
@@ -38,18 +33,11 @@ export default {
                     <span></span>
                     <span></span>
                     <h3>UNICA STRATEGIA ADATTA ANCHE A CONTI MEDIO PICCOLI</h3>
-                    <p>perché ha draw-down impercettibili che non fanno bruciare il conto proprio perché utilizzo
-                        stop-loss
-                        stretti: la gente si fa incantare su Istagram dove sulle storie vengono mostrati “SCREEN” com
-                        mega
-                        risultati di trading che in effetti sono veri ma realizzati da chi ha conti da 100.000 euro in
-                        su
-                        dove
-                        non usano STOP-LOSS: cosa succede? Semplice: loro possono tenere tante posizioni aperte anche in
-                        forte
-                        perdita, ma i piccoli trader che hanno conti medio/piccoli che provano ad utilizzare la loro
-                        strategia
-                        BRUCIANO I LORO CONTI E PERDONO TUTTO perché non reggono il forte draw-down.</p>
+                    <p>La caratteristica distintiva della nostra strategia è il suo adattamento anche ai conti
+                        medio-piccoli,
+                        grazie agli stop loss stretti che permettono draw-down minimi evitando perdite significative, al
+                        contrario di molti trader che non usano stop-loss e ti fanno bruciare il conto.
+                    </p>
                 </div>
             </div>
             <div class="button-container">
