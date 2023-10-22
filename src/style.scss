@@ -33,32 +33,26 @@
           font-weight: 600;
           overflow: hidden;
           transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
-          animation: bouncy 5s infinite linear;
-          animation-duration: 5s;
-          animation-delay: 2s;
+          animation: bouncy 3s infinite linear;
 
           @keyframes bouncy {
               0% {
                   top: 0em;
               }
 
-              40% {
-                  top: 0em;
-              }
-
-              43% {
+              3% {
                   top: -0.9em;
               }
 
-              46% {
+              6% {
                   top: 0em;
               }
 
-              48% {
+              9% {
                   top: -0.4em;
               }
 
-              50% {
+              12% {
                   top: 0em;
               }
 

@@ -113,8 +113,35 @@ export default {
                 border-radius: 34px;
                 background-color: #2FA9DA;
                 font-weight: 600;
-                transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
                 overflow: hidden;
+                transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+                animation: bouncy 3s infinite linear;
+
+                @keyframes bouncy {
+                    0% {
+                        top: 0em;
+                    }
+
+                    3% {
+                        top: -0.9em;
+                    }
+
+                    6% {
+                        top: 0em;
+                    }
+
+                    9% {
+                        top: -0.4em;
+                    }
+
+                    12% {
+                        top: 0em;
+                    }
+
+                    100% {
+                        top: 0em;
+                    }
+                }
             }
 
             .vip-button::before {
@@ -128,7 +155,7 @@ export default {
                 scale: 0;
                 z-index: -1;
                 background-color: #000000;
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+                transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
             }
 
             .vip-button:hover::before {
