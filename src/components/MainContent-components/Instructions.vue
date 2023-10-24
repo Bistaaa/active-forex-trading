@@ -11,7 +11,7 @@ export default {
 
 <template>
     <div id="instruction-container">
-        <h2 class="underlined">STEP NECESSARI</h2>
+        <h2>STEP NECESSARI</h2>
         <div id="steps-container">
             <div class="steps-column">
                 <h3>Compila il form</h3>

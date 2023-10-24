@@ -2,6 +2,7 @@
 import Instructions from './MainContent-components/Instructions.vue';
 import MyStrategy from './MainContent-components/MyStrategy.vue';
 import PersonalInfo from './MainContent-components/PersonalInfo.vue';
+import Ebook from './MainContent-components/Ebook.vue';
 
 export default {
     name: 'MainContent',
@@ -9,6 +10,7 @@ export default {
         Instructions,
         MyStrategy,
         PersonalInfo,
+        Ebook,
     },
     data() {
         return {
@@ -23,6 +25,7 @@ export default {
         <Instructions />
         <MyStrategy />
         <PersonalInfo />
+        <Ebook />
     </div>
 </template>
 
