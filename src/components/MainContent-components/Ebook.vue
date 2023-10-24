@@ -52,7 +52,7 @@ export default {
             height: 100%;
             width: 100%;
             position: relative;
-            z-index: 10;
+            z-index: 5;
 
             img {
                 background-size: contain;

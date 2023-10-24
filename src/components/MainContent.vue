@@ -3,6 +3,7 @@ import Instructions from './MainContent-components/Instructions.vue';
 import MyStrategy from './MainContent-components/MyStrategy.vue';
 import PersonalInfo from './MainContent-components/PersonalInfo.vue';
 import Ebook from './MainContent-components/Ebook.vue';
+import ContactForm from './MainContent-components/ContactForm.vue';
 
 export default {
     name: 'MainContent',
@@ -11,6 +12,7 @@ export default {
         MyStrategy,
         PersonalInfo,
         Ebook,
+        ContactForm,
     },
     data() {
         return {
@@ -26,9 +28,12 @@ export default {
         <MyStrategy />
         <PersonalInfo />
         <Ebook />
+        <ContactForm />
     </div>
 </template>
 
 <style scoped lang="scss">
-#main-container {}
+#main-container {
+    position: relative;
+}
 </style>
