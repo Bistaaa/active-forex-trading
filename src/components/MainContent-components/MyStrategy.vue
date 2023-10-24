@@ -1,4 +1,5 @@
 <script>
+import { handleVipButtonClick } from '../../main.js';
 
 export default {
     name: 'MyStrategy',
@@ -6,6 +7,12 @@ export default {
         return {
 
         }
+    },
+    methods: {
+        ShowForm() {
+
+            handleVipButtonClick();
+        },
     },
 }
 </script>
@@ -41,7 +48,7 @@ export default {
                 </div>
             </div>
             <div class="vip-button-container">
-                <button class="vip-button">Sblocca gratis Gruppo VIP</button>
+                <button class="vip-button" @click="ShowForm">Sblocca gratis Gruppo VIP</button>
             </div>
         </div>
     </div>

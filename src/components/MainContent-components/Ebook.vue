@@ -1,10 +1,18 @@
 <script>
+import { handleVipButtonClick } from '../../main.js';
+
 export default {
     name: 'Ebook',
     data() {
         return {
 
         }
+    },
+    methods: {
+        ShowForm() {
+
+            handleVipButtonClick();
+        },
     },
 }
 </script>
@@ -19,7 +27,7 @@ export default {
             </div>
             <div id="ebook-download-container">
                 <h4>SCARICA GRATIS IL MIO NUOVO E-BOOK</h4>
-                <button class="ebook-button">Scarica l'E-book</button>
+                <button class="ebook-button" @click="ShowForm">Scarica l'E-book</button>
             </div>
         </div>
     </div>
@@ -52,7 +60,7 @@ export default {
             height: 100%;
             width: 100%;
             position: relative;
-            z-index: 5;
+            z-index: 4;
 
             img {
                 background-size: contain;
@@ -74,7 +82,7 @@ export default {
             display: flex;
             flex-direction: column;
             align-items: center;
-            z-index: 11;
+            z-index: 5;
 
             h4 {
                 font-size: 30px;

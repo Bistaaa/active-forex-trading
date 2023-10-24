@@ -1,5 +1,6 @@
 <script>
 import Jumbotron from './Header-components/Jumbotron.vue'
+import { handleVipButtonClick } from '../main.js';
 
 export default {
     name: 'Header',
@@ -10,6 +11,12 @@ export default {
         return {
 
         }
+    },
+    methods: {
+        ShowForm() {
+
+            handleVipButtonClick();
+        },
     },
 }
 </script>
@@ -30,7 +37,7 @@ export default {
                 <span class="nav-link">Contatti</span>
             </div>
             <div id="vip-button-container-header">
-                <button class="vip-button">Sblocca gratis Gruppo VIP</button>
+                <button class="vip-button" @click="ShowForm">Sblocca gratis Gruppo VIP</button>
             </div>
         </div>
 

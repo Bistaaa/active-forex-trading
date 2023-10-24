@@ -18,6 +18,19 @@ export default {
       this.checkboxError = true;
     },
 
+    HideForm() {
+      const contactFormContainer = document.getElementById('contactform-container');
+
+      if (contactFormContainer) {
+
+        if (contactFormContainer.classList.contains('show-form')) {
+
+          contactFormContainer.classList.remove('show-form');
+          contactFormContainer.classList.add('hide-form');
+        }
+      }
+    },
+
     submitForm() {
       // Qui puoi inviare i dati a Google Sheets utilizzando l'API di Google Sheets o qualsiasi altro servizio di terze parti che preferisci.
     },
@@ -26,12 +39,12 @@ export default {
 </script>
 
 <template>
-  <div id="contactform-container">
+  <div class="hide-form" id="contactform-container">
+    <button class="close-button" @click="HideForm">&#10006;</button>
     <div id="form-logo-container">
       <img src="../../assets/img/white-logo.png" alt="">
     </div>
     <h2>COMPILA IL FORM</h2>
-    <button class="close-button" onclick="closeWindow()">&#10006;</button>
     <div id="form-container">
       <form @submit="submitForm">
         <div class="form-group">
@@ -76,6 +89,16 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.hide-form {
+  display: none;
+}
+
+.show-form {
+  display: flex;
+}
+
+
+
 #contactform-container {
   position: fixed;
   top: 50%;
@@ -87,7 +110,6 @@ export default {
   padding: 0 5% 50px;
   background: #1B1717;
   z-index: 10;
-  display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
