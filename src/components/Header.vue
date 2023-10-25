@@ -37,7 +37,7 @@ export default {
                 <span class="nav-link">Contatti</span>
             </div>
             <div id="vip-button-container-header">
-                <button class="vip-button" @click="ShowForm">Sblocca gratis Gruppo VIP</button>
+                <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
             </div>
         </div>
 

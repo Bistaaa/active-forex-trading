@@ -83,7 +83,7 @@ export default {
 
         </div>
         <div class="vip-button-container">
-            <button class="vip-button" @click="ShowForm">Sblocca gratis Gruppo VIP</button>
+            <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
         </div>
     </div>
 </template>
