@@ -92,6 +92,7 @@ export default {
       </div>
     </div>
     <div class="show-form" id="second-page-form">
+      <button class="close-button" @click="HideForm">&#10006;</button>
       <h2 id="second-page-title">Grazie per esserti registrato!</h2>
       <span id="second-page-contact-span">Un responsabile ti contatterà a breve</span>
       <span id="second-page-download-span">Scarica l'E-book:</span>
@@ -356,6 +357,23 @@ export default {
     align-items: center;
     color: #ffffff;
     padding: 50px 10% 20px;
+
+    .close-button {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #ffffff;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+
+      &:hover {
+        color: #FF0000;
+      }
+    }
 
     #second-page-title {
       font-size: 50px;
