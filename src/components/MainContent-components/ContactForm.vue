@@ -1,4 +1,6 @@
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
   name: 'ContactForm',
   data() {
@@ -23,24 +25,53 @@ export default {
 
       if (contactFormContainer) {
 
-        if (contactFormContainer.classList.contains('show-form')) {
+        if (contactFormContainer.classList.contains('show-form-container')) {
 
-          contactFormContainer.classList.remove('show-form');
-          contactFormContainer.classList.add('hide-form');
+          contactFormContainer.classList.remove('show-form-container');
+          contactFormContainer.classList.add('hide-form-container');
         }
       }
     },
 
+    changeFormPage() {
+      const currentFormPage = document.getElementById('first-page-form');
+
+      if (currentFormPage) {
+        if (currentFormPage.classList.contains('show-form')) {
+
+          currentFormPage.classList.remove('show-form');
+          currentFormPage.classList.add('hide-form');
+          this.currentFormPage = 'second-page-form';
+
+        };
+
+        if (currentFormPage.classList.contains('hide-form')) {
+
+          currentFormPage.classList.remove('hide-form');
+          currentFormPage.classList.add('show-form');
+          this.currentFormPage = 'first-page-form';
+        }
+      }
+    },
+
+    sendEmail() {
+      emailjs.sendForm('service_gwc7vhp', 'template_bpcot7h', this.$refs.form, 'haD2fBk5CrUugoVrd')
+        .then((result) => {
+          console.log('SUCCESS!', result.text);
+        }, (error) => {
+          console.log('FAILED...', error.text);
+        });
+    },
+
     submitForm() {
-      // Qui puoi inviare i dati a Google Sheets utilizzando l'API di Google Sheets o qualsiasi altro servizio di terze parti che preferisci.
     },
   },
 }
 </script>
 
 <template>
-  <div class="hide-form" id="contactform-container">
-    <div class="hide-form" id="first-page-form">
+  <div class="hide-form-container" id="contactform-container">
+    <div class="show-form" id="first-page-form">
       <button class="close-button" @click="HideForm">&#10006;</button>
       <div id="form-logo-container">
         <img src="../../assets/img/white-logo.png" alt="">
@@ -48,24 +79,24 @@ export default {
       <h2>COMPILA IL FORM</h2>
       <span id="form-explaination">e scarica l’E-book.</span>
       <div id="form-container">
-        <form @submit="submitForm">
+        <form ref="form" @submit.prevent="sendEmail">
           <div class="form-group">
-            <input type="text" id="name" class="input-group-input" v-model="formData.name" required>
+            <input type="text" id="name" name="name" class="input-group-input" v-model="formData.name" required>
             <label for="name" class="input-group-label">Nome:</label>
           </div>
 
           <div class="form-group">
-            <input type="text" id="surname" class="input-group-input" v-model="formData.surname" required>
+            <input type="text" id="surname" name="surname" class="input-group-input" v-model="formData.surname" required>
             <label for="surname" class="input-group-label">Cognome:</label>
           </div>
 
           <div class="form-group">
-            <input type="number" id="phone" class="input-group-input" v-model="formData.phone" required>
+            <input type="number" id="phone" name="phone" class="input-group-input" v-model="formData.phone" required>
             <label for="phone" class="input-group-label">Cellulare:</label>
           </div>
 
           <div class="form-group">
-            <input type="email" id="email" class="input-group-input" v-model="formData.email" required>
+            <input type="email" id="email" name="email" class="input-group-input" v-model="formData.email" required>
             <label for="email" class="input-group-label">E-mail:</label>
           </div>
 
@@ -82,7 +113,7 @@ export default {
 
           <div id="button-container">
             <div id="animation-container">
-              <button type="submit">
+              <button type="submit" @submit="submitForm">
                 Invia
               </button>
               <span></span>
@@ -91,8 +122,11 @@ export default {
         </form>
       </div>
     </div>
-    <div class="show-form" id="second-page-form">
+    <div class="hide-form" id="second-page-form">
       <button class="close-button" @click="HideForm">&#10006;</button>
+      <div id="form-logo-container">
+        <img src="../../assets/img/white-logo.png" alt="">
+      </div>
       <h2 id="second-page-title">Grazie per esserti registrato!</h2>
       <span id="second-page-contact-span">Un responsabile ti contatterà a breve</span>
       <span id="second-page-download-span">Scarica l'E-book:</span>
@@ -111,11 +145,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.hide-form {
+.hide-form-container {
   display: none;
 }
 
-.show-form {
+.show-form-container {
   display: flex;
 }
 
@@ -135,6 +169,14 @@ export default {
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+
+  .hide-form {
+    display: none;
+  }
+
+  .show-form {
+    display: flex;
+  }
 
   #first-page-form {
     z-index: 10;
@@ -372,6 +414,16 @@ export default {
 
       &:hover {
         color: #FF0000;
+      }
+    }
+
+    #form-logo-container {
+      width: 12%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
       }
     }
 

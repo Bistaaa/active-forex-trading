@@ -22,10 +22,10 @@ export function handleVipButtonClick() {
 
   if (contactFormContainer) {
     // Verifica se l'elemento esiste prima di modificare la classe
-    if (contactFormContainer.classList.contains('hide-form')) {
+    if (contactFormContainer.classList.contains('hide-form-container')) {
       // Rimuovi la classe "hide-form" e aggiungi la classe "show-form"
-      contactFormContainer.classList.remove('hide-form');
-      contactFormContainer.classList.add('show-form');
+      contactFormContainer.classList.remove('hide-form-container');
+      contactFormContainer.classList.add('show-form-container');
     }
   }
 }
