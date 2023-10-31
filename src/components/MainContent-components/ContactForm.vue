@@ -56,7 +56,7 @@ export default {
     },
 
     onFormSubmit() {
-      /* this.sendEmail(); */
+      this.sendEmail();
       this.submitForm();
     },
 
@@ -70,16 +70,24 @@ export default {
     },
 
     submitForm() {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwfN2obVWjL9-tZX6eAVe9OiU6E73f9tvjLHTH2PlCx2rIqNnPhOLtGMiN3ay99HpVl/exec'
-      const form = document.forms['contact-form']
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz2zE69OKZtEblOz-ltoqsI1BU4iwdnaOsrJ6nrmXjpJm7_bytWyfop6821vnluQP6C/exec';
+      const form = document.forms['contact-form'];
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => alert("Thank you!"))
-          .then(() => { window.location.reload(); })
-          .catch(error => console.error('Error!', error.message))
-      })
+      // Fetch request to submit the form data
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          // Reset the form data after successful submission
+          this.formData = {
+            name: '',
+            surname: '',
+            phone: '',
+            email: '',
+            checkbox: false // Include this line if you have a checkbox in the form
+          };
+          alert("Thank you!");
+        })
+        .then(() => { window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
     },
   },
 }
@@ -95,7 +103,7 @@ export default {
       <h2>COMPILA IL FORM</h2>
       <span id="form-explaination">e scarica l’E-book.</span>
       <div id="form-container">
-        <form method="post" action="" name="contact-form" id="contact-form" @submit.prevent="onFormSubmit">
+        <form method="post" action="" ref="form" name="contact-form" id="contact-form" @submit.prevent="onFormSubmit">
           <div class="form-group">
             <input type="text" id="name" name="name" class="input-group-input" v-model="formData.name" required>
             <label for="name" class="input-group-label">Nome:</label>
@@ -116,7 +124,7 @@ export default {
             <label for="email" class="input-group-label">E-mail:</label>
           </div>
 
-          <!-- <div class="form-checkbox-container">
+          <div class="form-checkbox-container">
             <input type="checkbox" value="None" id="checkbox" name="checkbox" v-model="formData.checkbox"
               @invalid="showCheckboxError" required>
             <label for="checkbox"></label>
@@ -125,7 +133,7 @@ export default {
                 href="https://www.flipbookpdf.net/web/site/833816ac165c7847026bce9b49317f9f34e54db2202206.pdf.html#page/1">Note
                 legali ed informativa sulla privacy</a> </span>
           </div>
-          <div v-if="checkboxError" class="error-message">Devi accettare l'informativa sulla privacy.</div> -->
+          <div v-if="checkboxError" class="error-message">Devi accettare l'informativa sulla privacy.</div>
 
           <div id="button-container">
             <div id="animation-container">
