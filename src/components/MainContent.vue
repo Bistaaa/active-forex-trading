@@ -3,6 +3,8 @@ import Instructions from './MainContent-components/Instructions.vue';
 import MyStrategy from './MainContent-components/MyStrategy.vue';
 import PersonalInfo from './MainContent-components/PersonalInfo.vue';
 import Ebook from './MainContent-components/Ebook.vue';
+import BestTrades from './MainContent-components/BestTrades.vue';
+import MyVideos from './MainContent-components/MyVideos.vue';
 import ContactForm from './MainContent-components/ContactForm.vue';
 
 export default {
@@ -12,6 +14,8 @@ export default {
         MyStrategy,
         PersonalInfo,
         Ebook,
+        BestTrades,
+        MyVideos,
         ContactForm,
     },
     data() {
@@ -28,6 +32,8 @@ export default {
         <MyStrategy />
         <PersonalInfo />
         <Ebook />
+        <BestTrades />
+        <MyVideos />
         <ContactForm />
     </div>
 </template>
