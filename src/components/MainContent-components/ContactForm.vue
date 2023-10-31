@@ -35,25 +35,19 @@ export default {
     },
 
     changeFormPage() {
-      const currentFormPage = document.getElementById('first-page-form');
+      const firstFormPage = document.getElementById('first-page-form');
+      const secondFormPage = document.getElementById('second-page-form');
 
-      if (currentFormPage) {
-        if (currentFormPage.classList.contains('show-form')) {
-
-          currentFormPage.classList.remove('show-form');
-          currentFormPage.classList.add('hide-form');
-          this.currentFormPage = 'second-page-form';
-
-        };
-
-        if (currentFormPage.classList.contains('hide-form')) {
-
-          currentFormPage.classList.remove('hide-form');
-          currentFormPage.classList.add('show-form');
-          this.currentFormPage = 'first-page-form';
+      if (firstFormPage && secondFormPage) {
+        if (firstFormPage.classList.contains('show-form')) {
+          firstFormPage.classList.remove('show-form');
+          firstFormPage.classList.add('hide-form');
+          secondFormPage.classList.remove('hide-form');
+          secondFormPage.classList.add('show-form');
         }
       }
     },
+
 
     onFormSubmit() {
       this.sendEmail();
@@ -70,7 +64,7 @@ export default {
     },
 
     submitForm() {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbz2zE69OKZtEblOz-ltoqsI1BU4iwdnaOsrJ6nrmXjpJm7_bytWyfop6821vnluQP6C/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzWIK8GhNWmIRr7Je-BJUlnQSWQCI-OJtDYmVSPu4WJOe0cT-zOQVDqnvqK6hBApS5z/exec';
       const form = document.forms['contact-form'];
 
       // Fetch request to submit the form data
@@ -84,9 +78,9 @@ export default {
             email: '',
             checkbox: false // Include this line if you have a checkbox in the form
           };
-          alert("Thank you!");
+          /* alert("Thank you!"); */
         })
-        .then(() => { window.location.reload(); })
+        /* .then(() => { window.location.reload(); }) */
         .catch(error => console.error('Error!', error.message))
     },
   },
@@ -137,7 +131,7 @@ export default {
 
           <div id="button-container">
             <div id="animation-container">
-              <button type="submit">
+              <button type="submit" @click="changeFormPage">
                 Invia
               </button>
               <span></span>
