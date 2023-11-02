@@ -21,6 +21,7 @@ export default {
     <div id="mystrategy-container">
         <div id="mystrategy-content-container">
             <h2>LA NOSTRA STRATEGIA VINCENTE</h2>
+            <h3>Perchè scegliere Active Forex Trading?</h3>
             <div id="strategy-description-container">
                 <div class="neon-border" id="left-description-container">
                     <span></span>
@@ -69,6 +70,14 @@ export default {
         h2 {
             text-align: center;
             font-size: 60px;
+            margin-bottom: 10px;
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 40px;
             margin-bottom: 150px;
             color: #000000;
         }

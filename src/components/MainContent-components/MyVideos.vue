@@ -15,7 +15,7 @@ export default {
         <span class="category-icon">
             <font-awesome-icon icon="fa-solid fa-video" />
         </span>
-        <h2>I MIEI VIDEO SUL TRADING</h2>
+        <h2>I MIEI VIDEO</h2>
         <div id="videos-container">
 
         </div>

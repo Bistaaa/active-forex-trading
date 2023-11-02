@@ -50,6 +50,7 @@ export default {
 
 
     onFormSubmit() {
+      this.changeFormPage();
       this.sendEmail();
       this.submitForm();
     },
@@ -131,7 +132,7 @@ export default {
 
           <div id="button-container">
             <div id="animation-container">
-              <button type="submit" @click="changeFormPage">
+              <button type="submit">
                 Invia
               </button>
               <span></span>
@@ -147,15 +148,32 @@ export default {
       </div>
       <h2 id="second-page-title">Grazie per esserti registrato!</h2>
       <span id="second-page-contact-span">Un responsabile ti contatterà a breve</span>
-      <span id="second-page-download-span">Scarica l'E-book:</span>
-      <div id="button-container">
-        <div id="animation-container">
-          <a href="/download/e-book.pdf" download="Ebook-active-forex-trading.pdf">
-            <button type="button">
-              Scarica
-            </button>
-          </a>
-          <span></span>
+      <div id="second-page-link-container">
+        <div id="second-page-left-side">
+          <span class="second-page-download-span">Scarica l'E-book:</span>
+          <div id="button-container">
+            <div id="animation-container">
+              <a href="/download/e-book.pdf" download="Ebook-active-forex-trading.pdf">
+                <button type="button">
+                  Scarica
+                </button>
+              </a>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div id="second-page-right-side">
+          <span class="second-page-download-span">Accedi al gruppo telegram "BASE"</span>
+          <div id="button-container">
+            <div id="animation-container">
+              <a href="https://t.me/activeforexbase" target="_blank">
+                <button type="button">
+                  Accedi
+                </button>
+              </a>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -416,7 +434,7 @@ export default {
     flex-direction: column;
     align-items: center;
     color: #ffffff;
-    padding: 50px 10% 20px;
+    padding: 50px 0;
 
     .close-button {
       position: absolute;
@@ -455,70 +473,96 @@ export default {
       margin-bottom: 100px;
     }
 
-    #second-page-download-span {
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-
-    #button-container {
+    #second-page-link-container {
       display: flex;
+      align-items: center;
       justify-content: center;
-      margin-bottom: 50px;
+      width: 100%;
 
-      #animation-container {
+      #second-page-left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        .second-page-download-span {
+          font-size: 25px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+
+      #second-page-right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        .second-page-download-span {
+          font-size: 25px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  #animation-container {
+    position: relative;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+    a {
+      button {
         position: relative;
-        padding-bottom: 10px;
-        overflow: hidden;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #ffffff;
+        background-color: transparent;
+        border-radius: 5px;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .5s;
+        letter-spacing: 4px;
+        border: none;
 
-        button {
-          position: relative;
-          display: inline-block;
-          padding: 10px 20px;
-          color: #ffffff;
-          background-color: transparent;
-          border-radius: 5px;
-          font-size: 16px;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: .5s;
-          letter-spacing: 4px;
-          border: none;
-        }
-
-        span {
-          position: absolute;
-          display: block;
-          z-index: 11;
-          bottom: 2px;
-          left: -100%;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, #ffffff);
-          animation: btn-anim1 2s linear infinite;
-        }
-
-        @keyframes btn-anim1 {
-          0% {
-            left: -100%;
-          }
-
-          100% {
-            left: 100%;
-          }
-        }
-
-        button:hover {
+        &:hover {
           color: #ECC01B;
           border-radius: 5px;
         }
+      }
 
-        button:active {
-          scale: 0.9;
-        }
+      &:hover+span {
+        background: linear-gradient(90deg, transparent, #ECC01B);
+      }
+    }
 
-        button:hover+span {
-          background: linear-gradient(90deg, transparent, #ECC01B);
-        }
+    span {
+      position: absolute;
+      display: block;
+      z-index: 11;
+      bottom: 2px;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ffffff);
+      animation: btn-anim1 2s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 100%;
       }
     }
   }
