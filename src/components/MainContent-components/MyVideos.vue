@@ -40,7 +40,7 @@ export default {
             </div>
         </div>
         <a href="https://calendar.app.google/K3eBKpJxMUR9BAM27" target="_blank">
-            <div id="calendar-button">Apri il calendario</div>
+            <div id="calendar-button">Prenota la tua consulenza gratuita</div>
         </a>
     </div>
 </template>
@@ -65,6 +65,7 @@ export default {
     #videos-container {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 50px;
 
         .single-video-container {
             width: calc(100% / 4);

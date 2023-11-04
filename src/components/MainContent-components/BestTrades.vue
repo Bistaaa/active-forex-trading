@@ -1,4 +1,6 @@
 <script>
+import { handleVipButtonClick } from '../../main.js';
+
 export default {
     name: 'BestTrades',
     data() {
@@ -39,23 +41,33 @@ export default {
         closeImage() {
             this.showLargeImage = false;
         },
+        ShowForm() {
+
+            handleVipButtonClick();
+        },
     },
 }
 </script>
 
 <template>
     <div id="best-trades-container">
-        <p class="category-icon-black">
+        <p class="category-icon">
             <font-awesome-icon icon="fa-solid fa-chart-line" />
         </p>
         <h2>I MIGLIORI TRADE DELL'ANNO</h2>
         <div id="trades-container">
             <div class="single-trade-container" v-for="(image, index) in images" :key="index">
                 <div class="trade-image-container">
-                    <img :src="'src/assets/img/best-trades/' + image" class="trades-images" alt="Trade Image"
-                        @click="openImage(image)" />
+                    <img :src="'src/assets/img/best-trades/' + image" class="trades-image" alt="Trade Image" />
+                    <div class="trades-image-overlay-container" @click="openImage(image)">
+                        <img src="../../assets/img/overlays/Overlay-60.png" class="trades-image-overlay" alt="">
+                        <span class="trades-image-overlay-text">VISUALIZZA <br> A SCHERMO INTERO</span>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="vip-button-container">
+            <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
         </div>
 
         <!-- Visualizza l'immagine ingrandita -->
@@ -87,6 +99,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        margin-bottom: 80px;
 
         .single-trade-container {
             width: calc(100% / 4);
@@ -97,17 +110,50 @@ export default {
                 padding-top: calc(9 / 16 * 100%);
                 overflow: hidden;
                 position: relative;
+                border: 1px solid black;
 
-                .trades-images {
+                .trades-image {
+                    background-size: cover;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 110%;
+                    z-index: 5;
+                    cursor: pointer;
+                }
+
+                .trades-image-overlay-container {
                     background-size: cover;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     width: 105%;
-                    z-index: 5;
+                    z-index: 6;
+                    opacity: 0;
+                    transition: opacity 0.3s;
                     cursor: pointer;
-                    /* Aggiungi il cursore mano quando si passa sopra l'immagine */
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    .trades-image-overlay {
+                        width: 100%;
+                        z-index: 7;
+                    }
+
+                    .trades-image-overlay-text {
+                        text-align: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: #ffffff;
+                    }
                 }
             }
         }

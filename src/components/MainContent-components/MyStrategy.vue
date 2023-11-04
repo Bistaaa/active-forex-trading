@@ -20,7 +20,7 @@ export default {
 <template>
     <div id="mystrategy-container">
         <div id="mystrategy-content-container">
-            <p class="category-icon-black">
+            <p class="category-icon">
                 <font-awesome-icon icon="fa-solid fa-bullseye" />
             </p>
             <h2>LA NOSTRA STRATEGIA VINCENTE</h2>

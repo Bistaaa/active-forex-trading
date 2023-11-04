@@ -19,7 +19,7 @@ export default {
 
 <template>
     <div id="personalinfo-container">
-        <p class="category-icon-black">
+        <p class="category-icon">
             <font-awesome-icon icon="fa-solid fa-user" />
         </p>
         <h2>CHI SONO</h2>

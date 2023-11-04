@@ -19,7 +19,7 @@ export default {
 
 <template>
     <div id="ebook-container">
-        <p class="category-icon-black">
+        <p class="category-icon">
             <font-awesome-icon icon="fa-solid fa-book-open" />
         </p>
         <h2>IL MIO E-BOOK</h2>
