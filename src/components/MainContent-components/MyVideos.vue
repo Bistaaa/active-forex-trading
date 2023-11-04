@@ -23,168 +23,177 @@ export default {
 </script>
 
 <template>
-    <div id="my-videos-container">
-        <p class="category-icon">
-            <font-awesome-icon icon="fa-solid fa-video" />
-        </p>
-        <h2>I MIEI ULTIMI VIDEO</h2>
-        <div id="videos-container">
-            <div class="single-video-container" v-for="video in videos" :key="video.id">
-                <a :href="'https://www.youtube.com/watch?v=' + video.id.videoId" target="_blank">
-                    <div class="video-thumbnail-container">
-                        <img :src="video.snippet.thumbnails.high.url" class="video-thumbnail" alt="">
-                        <img src="../../assets/img/overlay-video/Overlay-50.png" class="video-thumbnail-overlay" alt="">
-                    </div>
-                </a>
-                <h3 class="video-title-container">{{ video.snippet.title }}</h3>
+    <div id="my-videos-overall-container">
+        <div id="my-videos-content-container">
+            <p class="category-icon">
+                <font-awesome-icon icon="fa-solid fa-video" />
+            </p>
+            <h2>I MIEI ULTIMI VIDEO</h2>
+            <div id="videos-container">
+                <div class="single-video-container" v-for="video in videos" :key="video.id">
+                    <a :href="'https://www.youtube.com/watch?v=' + video.id.videoId" target="_blank">
+                        <div class="video-thumbnail-container">
+                            <img :src="video.snippet.thumbnails.high.url" class="video-thumbnail" alt="">
+                            <img src="../../assets/img/overlay-video/Overlay-50.png" class="video-thumbnail-overlay" alt="">
+                        </div>
+                    </a>
+                    <h3 class="video-title-container">{{ video.snippet.title }}</h3>
+                </div>
             </div>
+            <a href="https://calendar.app.google/K3eBKpJxMUR9BAM27" target="_blank">
+                <div id="calendar-button">Prenota la tua consulenza gratuita</div>
+            </a>
         </div>
-        <a href="https://calendar.app.google/K3eBKpJxMUR9BAM27" target="_blank">
-            <div id="calendar-button">Prenota la tua consulenza gratuita</div>
-        </a>
     </div>
 </template>
 
 <style scoped lang="scss">
-#my-videos-container {
-    background-color: #ffffff;
-    padding: 100px 10%;
+#my-videos-overall-container {
+    background-image: url(../../assets/img/laptop-background.png);
+    background-size: cover;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    h2 {
-        color: #000000;
-        font-size: 65px;
-        text-align: center;
-        text-decoration: underline;
-        margin-bottom: 30px;
-    }
-
-    #videos-container {
+    #my-videos-content-container {
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
+        width: 100%;
+        height: 100%;
+        padding: 100px 10%;
         display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
 
-        .single-video-container {
-            width: calc(100% / 4);
-            padding: 30px 20px;
+        h2 {
+            color: #000000;
+            font-size: 65px;
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 30px;
+        }
 
-            .video-thumbnail-container {
-                width: 100%;
-                padding-top: calc(9 / 16 * 100%);
-                overflow: hidden;
-                position: relative;
+        #videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
 
-                .video-thumbnail {
-                    background-size: cover;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+            .single-video-container {
+                width: calc(100% / 4);
+                padding: 30px 20px;
+
+                .video-thumbnail-container {
                     width: 100%;
-                    z-index: 5;
-                }
+                    padding-top: calc(9 / 16 * 100%);
+                    overflow: hidden;
+                    position: relative;
 
-                .video-thumbnail-overlay {
-                    background-size: cover;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 105%;
-                    z-index: 6;
-                    opacity: 0;
-                    transition: opacity 0.3s;
-                    cursor: pointer;
+                    .video-thumbnail {
+                        background-size: cover;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        z-index: 5;
+                    }
 
-                    &:hover {
-                        opacity: 1;
+                    .video-thumbnail-overlay {
+                        background-size: cover;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 105%;
+                        z-index: 6;
+                        opacity: 0;
+                        transition: opacity 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 1;
+                        }
                     }
                 }
-            }
 
-            .video-title-container {
-                margin-top: 10px;
-            }
-        }
-    }
-
-    #calendar-button {
-        background-color: #ECC01B;
-        font-size: 18px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        display: inline-block;
-        text-align: center;
-        font-weight: bold;
-        padding: 0.7em 2em;
-        border: 3px solid #000000;
-        border-radius: 2px;
-        position: relative;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
-        color: #000000;
-        text-decoration: none;
-        transition: 0.3s ease all;
-        margin-top: 20px;
-        z-index: 1;
-        animation: bouncy 3s infinite linear;
-
-        @keyframes bouncy {
-            0% {
-                top: 0em;
-            }
-
-            3% {
-                top: -0.9em;
-            }
-
-            6% {
-                top: 0em;
-            }
-
-            9% {
-                top: -0.4em;
-            }
-
-            12% {
-                top: 0em;
-            }
-
-            100% {
-                top: 0em;
+                .video-title-container {
+                    margin-top: 10px;
+                }
             }
         }
 
-        &:before {
-            transition: 0.5s all ease;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            right: 50%;
-            bottom: 0;
-            opacity: 0;
-            content: '';
-            background-color: #ffffff;
-            z-index: -1;
-        }
-
-        &:hover,
-        &:focus {
-            color: #000000;
+        #calendar-button {
+            background-color: #ECC01B;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            padding: 0.7em 2em;
             border: 3px solid #000000;
+            border-radius: 2px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+            color: #000000;
+            text-decoration: none;
+            transition: 0.3s ease all;
+            margin-top: 20px;
+            z-index: 1;
+            animation: bouncy 3s infinite linear;
+
+            @keyframes bouncy {
+                0% {
+                    top: 0em;
+                }
+
+                3% {
+                    top: -0.9em;
+                }
+
+                6% {
+                    top: 0em;
+                }
+
+                9% {
+                    top: -0.4em;
+                }
+
+                12% {
+                    top: 0em;
+                }
+
+                100% {
+                    top: 0em;
+                }
+            }
 
             &:before {
                 transition: 0.5s all ease;
-                left: 0;
-                right: 0;
-                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                right: 50%;
+                bottom: 0;
+                opacity: 0;
+                content: '';
+                background-color: #ffffff;
+                z-index: -1;
             }
-        }
 
-        &:active {
-            transform: scale(0.9);
+            &:hover,
+            &:focus {
+                color: #000000;
+                border: 3px solid #000000;
+
+                &:before {
+                    transition: 0.5s all ease;
+                    left: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
         }
     }
 }
