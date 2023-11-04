@@ -19,6 +19,9 @@ export default {
 
 <template>
     <div id="ebook-container">
+        <p class="category-icon-black">
+            <font-awesome-icon icon="fa-solid fa-book-open" />
+        </p>
         <h2>IL MIO E-BOOK</h2>
         <h3>"Dalle basi alla mia strategia"</h3>
         <div id="ebook-main-content-container">
@@ -27,7 +30,7 @@ export default {
             </div>
             <div id="ebook-download-container">
                 <h4>SCARICA GRATIS IL MIO NUOVO E-BOOK</h4>
-                <button class="ebook-button" @click="ShowForm">Scarica l'E-book</button>
+                <button id="ebook-button" @click="ShowForm">Scarica l'E-book</button>
             </div>
         </div>
     </div>
@@ -93,7 +96,7 @@ export default {
         }
     }
 
-    .ebook-button {
+    #ebook-button {
         background-color: #ECC01B;
         font-size: 18px;
         letter-spacing: 2px;
@@ -169,6 +172,5 @@ export default {
             transform: scale(0.9);
         }
     }
-
 }
 </style>

@@ -20,6 +20,9 @@ export default {
 <template>
     <div id="mystrategy-container">
         <div id="mystrategy-content-container">
+            <p class="category-icon-black">
+                <font-awesome-icon icon="fa-solid fa-bullseye" />
+            </p>
             <h2>LA NOSTRA STRATEGIA VINCENTE</h2>
             <h3>Perchè scegliere Active Forex Trading?</h3>
             <div id="strategy-description-container">

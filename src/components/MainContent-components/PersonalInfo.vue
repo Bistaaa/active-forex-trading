@@ -19,6 +19,9 @@ export default {
 
 <template>
     <div id="personalinfo-container">
+        <p class="category-icon-black">
+            <font-awesome-icon icon="fa-solid fa-user" />
+        </p>
         <h2>CHI SONO</h2>
         <div id="personalinfo-main-content">
             <div id="personalinfo-upper-content">

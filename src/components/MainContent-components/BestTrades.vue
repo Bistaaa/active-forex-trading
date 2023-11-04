@@ -34,9 +34,9 @@ export default {
 
 <template>
     <div id="best-trades-container">
-        <span class="category-icon-black">
+        <p class="category-icon-black">
             <font-awesome-icon icon="fa-solid fa-chart-line" />
-        </span>
+        </p>
         <h2>I MIGLIORI TRADE DELL'ANNO</h2>
         <div id="trades-container">
             <div class="trade-image-container" v-for="(image, index) in images" :key="index">
