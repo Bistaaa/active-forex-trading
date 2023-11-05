@@ -110,7 +110,11 @@ export default {
                 padding-top: calc(9 / 16 * 100%);
                 overflow: hidden;
                 position: relative;
-                border: 1px solid black;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
 
                 .trades-image {
                     background-size: cover;
