@@ -20,36 +20,36 @@ export default {
         <!-- LOWER FOOTER -->
         <div id="lower-footer">
             <div id="social-container">
-                <div class="social-icon-background" id="youtube-background">
-                    <a href="https://www.youtube.com/channel/UCb1ZKE1eay_VPglsP0Xp7EQ" target="_blank">
+                <a href="https://www.youtube.com/channel/UCb1ZKE1eay_VPglsP0Xp7EQ" target="_blank">
+                    <div class="social-icon-background" id="youtube-background">
                         <img src="../assets/img/social-icons/youtube-icon.png" class="social-icon" id="youtube-icon">
-                    </a>
-                </div>
-                <div class="social-icon-background" id="telegram-background">
-                    <a href="https://t.me/activeforexbase" target="_blank">
+                    </div>
+                </a>
+                <a href="https://t.me/activeforexbase" target="_blank">
+                    <div class="social-icon-background" id="telegram-background">
                         <img src="../assets/img/social-icons/telegram-icon.png" class="social-icon" id="telegram-icon">
-                    </a>
-                </div>
-                <div class="social-icon-background" id="instagram-background">
-                    <a href="https://www.instagram.com/active_forex_trading_/" target="_blank">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/active_forex_trading_/" target="_blank">
+                    <div class="social-icon-background" id="instagram-background">
                         <img src="../assets/img/social-icons/instagram-icon.png" class="social-icon" id="instagram-icon">
-                    </a>
-                </div>
-                <div class="social-icon-background" id="facebook-background">
-                    <a href="https://www.facebook.com/activeforextrading.it/" target="_blank">
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/activeforextrading.it/" target="_blank">
+                    <div class="social-icon-background" id="facebook-background">
                         <img src="../assets/img/social-icons/facebook-icon.png" class="social-icon" id="facebook-icon">
-                    </a>
-                </div>
-                <div class="social-icon-background" id="whatsapp-background">
-                    <a href="https://wa.me/message/POHA3ZSPWN73D1" target="_blank">
+                    </div>
+                </a>
+                <a href="https://wa.me/message/POHA3ZSPWN73D1" target="_blank">
+                    <div class="social-icon-background" id="whatsapp-background">
                         <img src="../assets/img/social-icons/whatsapp-icon.png" class="social-icon" id="whatsapp-icon">
-                    </a>
-                </div>
-                <div class="social-icon-background" id="mail-background">
-                    <a href="mailto:info@activeforextrading.it" target="_blank">
+                    </div>
+                </a>
+                <a href="mailto:info@activeforextrading.it" target="_blank">
+                    <div class="social-icon-background" id="mail-background">
                         <img src="../assets/img/social-icons/mail-icon.png" class="social-icon" id="mail-icon">
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
             <span class="bottom-footer-info" id="owner">Active Forex Trading di Bistarelli Riccardo</span>
             <span class="bottom-footer-info" id="owner-vat-number">P.IVA: 03832340545</span>
