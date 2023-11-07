@@ -3,12 +3,12 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(fas);
 
-import { createApp } from 'vue'
-import './style.scss'
-import App from './App.vue'
+import { createApp } from 'vue';
+import './style.scss';
+import App from './App.vue';
+import { router } from '../router.js';
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount('#app')
-
+createApp(App).use(router).component("font-awesome-icon", FontAwesomeIcon).mount('#app');
 
 
 

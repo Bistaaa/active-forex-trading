@@ -1,4 +1,5 @@
 <script>
+import Jumbotron from './MainContent-components/Jumbotron.vue'
 import Instructions from './MainContent-components/Instructions.vue';
 import MyStrategy from './MainContent-components/MyStrategy.vue';
 import PersonalInfo from './MainContent-components/PersonalInfo.vue';
@@ -10,6 +11,7 @@ import ContactForm from './MainContent-components/ContactForm.vue';
 export default {
     name: 'MainContent',
     components: {
+        Jumbotron,
         Instructions,
         MyStrategy,
         PersonalInfo,
@@ -28,6 +30,7 @@ export default {
 
 <template>
     <div id="main-container">
+        <Jumbotron />
         <Instructions />
         <MyStrategy />
         <PersonalInfo />

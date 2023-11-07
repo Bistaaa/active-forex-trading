@@ -1,12 +1,9 @@
 <script>
-import Jumbotron from './Header-components/Jumbotron.vue'
 import { handleVipButtonClick } from '../main.js';
+import { RouterLink } from 'vue-router';
 
 export default {
     name: 'Header',
-    components: {
-        Jumbotron
-    },
     data() {
         return {
 
@@ -16,6 +13,9 @@ export default {
         ShowForm() {
 
             handleVipButtonClick();
+        },
+        navigateTo(route) {
+            this.$router.push(route);
         },
     },
 }
@@ -33,15 +33,13 @@ export default {
                 <span class="nav-link">I Nostri Corsi</span>
                 <span class="nav-link">Chi Sono</span>
                 <span class="nav-link">Indicatore</span>
-                <span class="nav-link">FAQ</span>
+                <span class="nav-link" @click="navigateTo('/faq')">FAQ</span>
                 <span class="nav-link">Contatti</span>
             </div>
             <div id="vip-button-container-header">
                 <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
             </div>
         </div>
-
-        <Jumbotron />
     </div>
 </template>
   
