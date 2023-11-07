@@ -14,8 +14,24 @@ export default {
 
             handleVipButtonClick();
         },
+
+
         navigateTo(route) {
+
             this.$router.push(route);
+        },
+
+
+        scrollToElement(elementId) {
+
+            this.$router.push('/');
+
+            setTimeout(() => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300);
         },
     },
 }
@@ -26,15 +42,15 @@ export default {
         <!-- NAV -->
         <div id="nav-container">
             <div id="nav-logo">
-                <img src="../assets/img/logo.png" alt="">
+                <img src="../assets/img/logo.png" alt="" @click="navigateTo('/')">
             </div>
             <div id="nav-menu">
-                <span class="nav-link">La Strategia</span>
-                <span class="nav-link">I Nostri Corsi</span>
-                <span class="nav-link">Chi Sono</span>
-                <span class="nav-link">Indicatore</span>
+                <span class="nav-link" @click="scrollToElement('mystrategy-container')">La Strategia</span>
+                <span class="nav-link" @click="scrollToElement('elementId')">I Nostri Corsi</span>
+                <span class="nav-link" @click="scrollToElement('personalinfo-container')">Chi Sono</span>
+                <span class="nav-link" @click="scrollToElement('elementId')">Indicatore</span>
                 <span class="nav-link" @click="navigateTo('/faq')">FAQ</span>
-                <span class="nav-link">Contatti</span>
+                <span class="nav-link" @click="scrollToElement('footer-container')">Contatti</span>
             </div>
             <div id="vip-button-container-header">
                 <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
@@ -63,6 +79,7 @@ export default {
 
             img {
                 height: 100%;
+                cursor: pointer;
             }
         }
 
