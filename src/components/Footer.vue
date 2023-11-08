@@ -1,10 +1,10 @@
 <script>
-
 export default {
     name: 'Footer',
     data() {
         return {
-
+            showDownArrow: false,
+            showSubMenu: false,
         }
     },
 }
@@ -14,40 +14,101 @@ export default {
     <div id="footer-container">
 
         <!-- UPPER FOOTER -->
-        <div id="upper-footer"></div>
+        <div id="upper-footer">
 
+            <!-- CONTACTS COLUMN -->
+            <div class="upper-footer-column">
+                <font-awesome-icon icon="fa-solid fa-address-book" class="footer-icon" />
+                <div class="footer-title-and-menu-container" @mouseover="showDownArrow = true; showSubMenu = true"
+                    @mouseout="showSubMenu = false">
+                    <div class="footer-title-container">
+                        <span class="footer-title">CONTATTI</span>
+                        <div class="footer-title-arrow-container" v-if="!showDownArrow">
+                            <font-awesome-icon icon="fa-solid fa-sort-up" class="footer-title-arrow"
+                                id="footer-title-arrow-up" />
+                        </div>
+                        <div class="footer-title-arrow-container" v-if="showDownArrow">
+                            <font-awesome-icon icon="fa-solid fa-sort-down" class="footer-title-arrow"
+                                id="footer-title-arrow-down" />
+                        </div>
+                    </div>
+                    <div class="footer-sub-menu" v-show="showSubMenu">
+                        <div class="footer-menu-row">
+                            <div class="footer-menu-row-icon-container" id="phone-menu-background">
+                                <img src="../assets/img/social-icons/phone-icon.png" class="footer-social-icon" />
+                            </div>
+                            <a href="tel:+393383525888" target="_blank">
+                                <span class="footer-menu-row-data">+39 3383525888</span>
+                            </a>
+                        </div>
+                        <div class="footer-menu-row">
+                            <div class="footer-menu-row-icon-container" id="whatsapp-menu-background">
+                                <img src="../assets/img/social-icons/whatsapp-icon.png" class="footer-social-icon" />
+                            </div>
+                            <a href="https://wa.me/message/POHA3ZSPWN73D1" target="_blank">
+                                <span class="footer-menu-row-data">+39 3383525888</span>
+                            </a>
+                        </div>
+                        <div class="footer-menu-row">
+                            <div class="footer-menu-row-icon-container" id="telegram-menu-background">
+                                <img src="../assets/img/social-icons/telegram-icon.png" class="footer-social-icon" />
+                            </div>
+                            <a href="https://t.me/Riccardobista" target="_blank">
+                                <span class="footer-menu-row-data">@Riccardobista</span>
+                            </a>
+                        </div>
+                        <div class="footer-menu-row">
+                            <div class="footer-menu-row-icon-container" id="mail-menu-background">
+                                <img src="../assets/img/social-icons/mail-icon.png" class="footer-social-icon" />
+                            </div>
+                            <a href="mailto:info@activeforextrading.it" target="_blank">
+                                <span class="footer-menu-row-data">info@activeforextrading.it</span>
+                            </a>
+                        </div>
+                        <div class="footer-menu-row">
+                            <div class="footer-menu-row-icon-container" id="location-menu-background">
+                                <img src="../assets/img/social-icons/location-icon.png" class="footer-social-icon" />
+                            </div>
+                            <a>
+                                <span class="footer-menu-row-data">Via Santa Maria, 2 - 06010 Citerna (PG)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- LOWER FOOTER -->
         <div id="lower-footer">
             <div id="social-container">
                 <a href="https://www.youtube.com/channel/UCb1ZKE1eay_VPglsP0Xp7EQ" target="_blank">
                     <div class="social-icon-background" id="youtube-background">
-                        <img src="../assets/img/social-icons/youtube-icon.png" class="social-icon" id="youtube-icon">
+                        <img src="../assets/img/social-icons/youtube-icon.png" class="social-icon" id="youtube-icon" />
                     </div>
                 </a>
                 <a href="https://t.me/activeforexbase" target="_blank">
                     <div class="social-icon-background" id="telegram-background">
-                        <img src="../assets/img/social-icons/telegram-icon.png" class="social-icon" id="telegram-icon">
+                        <img src="../assets/img/social-icons/telegram-icon.png" class="social-icon" id="telegram-icon" />
                     </div>
                 </a>
                 <a href="https://www.instagram.com/active_forex_trading_/" target="_blank">
                     <div class="social-icon-background" id="instagram-background">
-                        <img src="../assets/img/social-icons/instagram-icon.png" class="social-icon" id="instagram-icon">
+                        <img src="../assets/img/social-icons/instagram-icon.png" class="social-icon" id="instagram-icon" />
                     </div>
                 </a>
-                <a href="https://www.facebook.com/activeforextrading.it/" target="_blank">
+                <a href="https://www.facebook.com/activeforextrading.it" target="_blank">
                     <div class="social-icon-background" id="facebook-background">
-                        <img src="../assets/img/social-icons/facebook-icon.png" class="social-icon" id="facebook-icon">
+                        <img src="../assets/img/social-icons/facebook-icon.png" class="social-icon" id="facebook-icon" />
                     </div>
                 </a>
                 <a href="https://wa.me/message/POHA3ZSPWN73D1" target="_blank">
                     <div class="social-icon-background" id="whatsapp-background">
-                        <img src="../assets/img/social-icons/whatsapp-icon.png" class="social-icon" id="whatsapp-icon">
+                        <img src="../assets/img/social-icons/whatsapp-icon.png" class="social-icon" id="whatsapp-icon" />
                     </div>
                 </a>
                 <a href="mailto:info@activeforextrading.it" target="_blank">
                     <div class="social-icon-background" id="mail-background">
-                        <img src="../assets/img/social-icons/mail-icon.png" class="social-icon" id="mail-icon">
+                        <img src="../assets/img/social-icons/mail-icon.png" class="social-icon" id="mail-icon" />
                     </div>
                 </a>
             </div>
@@ -57,15 +118,146 @@ export default {
         </div>
     </div>
 </template>
+  
 
 <style scoped lang="scss">
 #footer-container {
 
-    #upper-footer {}
+    #upper-footer {
+        background-color: #ECC01B;
+        padding: 50px 10% 80px;
+
+        .upper-footer-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .footer-icon {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            .footer-title-and-menu-container {
+                position: relative;
+
+                .footer-title-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+
+                    .footer-title {
+                        font-size: 35px;
+                    }
+
+                    .footer-title-arrow-container {
+                        position: relative;
+                        height: 30px;
+                        width: 30px;
+
+                        .footer-title-arrow {
+                            font-size: 25px;
+                            position: absolute;
+                        }
+
+                        #footer-title-arrow-up {
+                            top: 12px;
+                        }
+
+                        #footer-title-arrow-down {
+                            bottom: 6px;
+                        }
+
+                    }
+                }
+
+                .footer-sub-menu {
+                    position: absolute;
+                    left: 0;
+                    z-index: 4;
+                    border: 1px solid #ffffff;
+                    background-color: #111111;
+                    padding: 5px 5px;
+
+
+                    .footer-menu-row {
+                        /* background-color: #d6249f; */
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 20px;
+                        padding: 10px 10px;
+                        position: relative;
+
+                        &:not(:last-child)::before {
+                            content: "";
+                            position: absolute;
+                            width: 90%;
+                            height: 1px;
+                            background-color: white;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                        .footer-menu-row-icon-container {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            position: relative;
+
+                            .footer-menu-row-icon {
+                                font-size: 27px;
+                                color: white;
+                            }
+
+                            .footer-social-icon {
+                                width: 60%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+
+                        #phone-menu-background {
+                            background-color: #ECC01B;
+                        }
+
+                        #whatsapp-menu-background {
+                            background-color: #25D366
+                        }
+
+                        #telegram-menu-background {
+                            background-color: #2481CC
+                        }
+
+                        #mail-menu-background {
+                            background-color: #dd9716
+                        }
+
+                        #location-menu-background {
+                            background-color: #ff0000
+                        }
+
+                        a {
+                            text-decoration: none;
+
+                            .footer-menu-row-data {
+                                font-size: 20px;
+                                color: #ffffff;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #lower-footer {
         background-color: #111111;
-        padding: 30px 0 20px;
+        padding: 40px 0 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -74,12 +266,12 @@ export default {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 20px;
+            margin: 10px 0 30px;
 
             .social-icon-background {
-                height: 50px;
-                width: 50px;
+                height: 60px;
+                width: 60px;
                 border-radius: 50%;
                 position: relative;
 
@@ -128,7 +320,7 @@ export default {
         }
 
         .bottom-footer-info {
-            font-size: 20px;
+            font-size: 23px;
             color: #ffffff;
         }
 
