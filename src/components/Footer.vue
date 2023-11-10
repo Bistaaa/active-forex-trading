@@ -3,11 +3,27 @@ export default {
     name: 'Footer',
     data() {
         return {
-            showDownArrow: false,
-            showSubMenu: false,
-        }
+            showSubMenuContacts: false,
+            showSubMenuLinks: false,
+        };
     },
-}
+    methods: {
+        scrollToElement(elementId) {
+            this.$router.push('/');
+
+            setTimeout(() => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300);
+        },
+
+        navigateTo(route) {
+            this.$router.push(route);
+        },
+    },
+};
 </script>
 
 <template>
@@ -19,20 +35,15 @@ export default {
             <!-- CONTACTS COLUMN -->
             <div class="upper-footer-column">
                 <font-awesome-icon icon="fa-solid fa-address-book" class="footer-icon" />
-                <div class="footer-title-and-menu-container" @mouseover="showDownArrow = true; showSubMenu = true"
-                    @mouseout="showSubMenu = false">
+                <div class="footer-title-and-menu-container" @mouseover=" showSubMenuContacts = true"
+                    @mouseout="showSubMenuContacts = false;">
                     <div class="footer-title-container">
                         <span class="footer-title">CONTATTI</span>
-                        <div class="footer-title-arrow-container" v-if="!showDownArrow">
-                            <font-awesome-icon icon="fa-solid fa-sort-up" class="footer-title-arrow"
-                                id="footer-title-arrow-up" />
-                        </div>
-                        <div class="footer-title-arrow-container" v-if="showDownArrow">
-                            <font-awesome-icon icon="fa-solid fa-sort-down" class="footer-title-arrow"
-                                id="footer-title-arrow-down" />
+                        <div class="footer-title-arrow-container">
+                            <font-awesome-icon icon="fa-solid fa-angles-down" class="footer-title-arrow" />
                         </div>
                     </div>
-                    <div class="footer-sub-menu" v-show="showSubMenu">
+                    <div class="footer-sub-menu" v-show="showSubMenuContacts">
                         <div class="footer-menu-row">
                             <div class="footer-menu-row-icon-container" id="phone-menu-background">
                                 <img src="../assets/img/social-icons/phone-icon.png" class="footer-social-icon" />
@@ -65,13 +76,55 @@ export default {
                                 <span class="footer-menu-row-data">info@activeforextrading.it</span>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- LOCATIONS COLUMN -->
+            <div class="upper-footer-column">
+                <font-awesome-icon icon="fa-solid fa-location-dot" class="footer-icon" />
+                <div class="footer-title-and-menu-container">
+                    <div class="footer-title-container">
+                        <span class="footer-title">DOVE SIAMO</span>
+                    </div>
+                    <span>Via Santa Maria, 2 - 06010 Citerna (PG)</span>
+                </div>
+            </div>
+
+
+            <!-- LINKS COLUMN -->
+            <div class="upper-footer-column">
+                <font-awesome-icon icon="fa-solid fa-link" class="footer-icon" />
+                <div class="footer-title-and-menu-container" @mouseover="showSubMenuLinks = true"
+                    @mouseout="showSubMenuLinks = false;">
+                    <div class="footer-title-container">
+                        <span class="footer-title">LINK</span>
+                        <div class="footer-title-arrow-container">
+                            <font-awesome-icon icon="fa-solid fa-angles-down" class="footer-title-arrow" />
+                        </div>
+                    </div>
+                    <div class="footer-sub-menu" v-show="showSubMenuLinks">
                         <div class="footer-menu-row">
-                            <div class="footer-menu-row-icon-container" id="location-menu-background">
-                                <img src="../assets/img/social-icons/location-icon.png" class="footer-social-icon" />
-                            </div>
-                            <a>
-                                <span class="footer-menu-row-data">Via Santa Maria, 2 - 06010 Citerna (PG)</span>
-                            </a>
+                            <span class="footer-menu-row-data" @click="scrollToElement('mystrategy-container')"> Strategia
+                            </span>
+                        </div>
+                        <div div class="footer-menu-row">
+                            <span class="footer-menu-row-data" @click="scrollToElement('personalinfo-container')">Chi
+                                Sono</span>
+                        </div>
+                        <div class="footer-menu-row">
+                            <span class="footer-menu-row-data"
+                                @click="scrollToElement('ebook-overall-container')">E-Book</span>
+                        </div>
+                        <div class="footer-menu-row">
+                            <span class="footer-menu-row-data" @click="scrollToElement('footer-container')">Contatti</span>
+                        </div>
+                        <div class="footer-menu-row">
+                            <span class="footer-menu-row-data" @click="navigateTo('/faq')">FAQ</span>
+                        </div>
+                        <div class="footer-menu-row">
+                            <span class="footer-menu-row-data" @click="navigateTo('/faq')">I Nostri Corsi</span>
                         </div>
                     </div>
                 </div>
@@ -126,11 +179,14 @@ export default {
     #upper-footer {
         background-color: #ECC01B;
         padding: 50px 10% 80px;
+        display: flex;
+        justify-content: space-between;
 
         .upper-footer-column {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: calc(100% / 3);
 
             .footer-icon {
                 font-size: 50px;
@@ -139,12 +195,14 @@ export default {
 
             .footer-title-and-menu-container {
                 position: relative;
+                cursor: pointer;
 
                 .footer-title-container {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 20px;
+                    justify-content: center;
+                    gap: 10px;
 
                     .footer-title {
                         font-size: 35px;
@@ -156,24 +214,17 @@ export default {
                         width: 30px;
 
                         .footer-title-arrow {
-                            font-size: 25px;
+                            font-size: 20px;
                             position: absolute;
+                            top: 7px;
                         }
-
-                        #footer-title-arrow-up {
-                            top: 12px;
-                        }
-
-                        #footer-title-arrow-down {
-                            bottom: 6px;
-                        }
-
                     }
                 }
 
                 .footer-sub-menu {
                     position: absolute;
-                    left: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
                     z-index: 4;
                     border: 1px solid #ffffff;
                     background-color: #111111;
@@ -221,7 +272,7 @@ export default {
                         }
 
                         #phone-menu-background {
-                            background-color: #ECC01B;
+                            background-color: #ff0000;
                         }
 
                         #whatsapp-menu-background {
@@ -243,10 +294,16 @@ export default {
                         a {
                             text-decoration: none;
 
-                            .footer-menu-row-data {
-                                font-size: 20px;
-                                color: #ffffff;
-                                white-space: nowrap;
+                        }
+
+                        .footer-menu-row-data {
+                            font-size: 20px;
+                            color: #ffffff;
+                            white-space: nowrap;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #ECC01B;
                             }
                         }
                     }

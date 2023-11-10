@@ -33,9 +33,18 @@ export default {
             ],
         };
     },
+
+    mounted() {
+        this.scrollToTop();
+    },
+
     methods: {
         toggleAccordion(faq) {
             faq.expanded = !faq.expanded;
+        },
+
+        scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         },
     },
 };
