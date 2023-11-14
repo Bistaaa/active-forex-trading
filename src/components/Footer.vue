@@ -124,7 +124,7 @@ export default {
                             <span class="footer-menu-row-data" @click="navigateTo('/faq')">FAQ</span>
                         </div>
                         <div class="footer-menu-row">
-                            <span class="footer-menu-row-data" @click="navigateTo('/faq')">I Nostri Corsi</span>
+                            <span class="footer-menu-row-data" @click="navigateTo('/shop')">I Nostri Corsi</span>
                         </div>
                     </div>
                 </div>

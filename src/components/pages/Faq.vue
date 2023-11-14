@@ -6,13 +6,13 @@ export default {
         return {
             faqList: [
                 {
-                    question: "Quanto posso guadagnare in 1 mese?",
-                    answer: "1.000€, 1.500€, 2.000€ tutto è relativo e dipende dal budget di investimento che imposti. Punteremo a incrementare giorno dopo giorno il tuo budget di investimento con l’obiettivo di farti guadagnare sempre di più.",
+                    question: "PERCHE’ SCEGLIERE LA NOSTRA STRATEGIA?",
+                    answer: 'La nostra strategia si basa sul motto "STOPPARE LE PERDITE SUL NASCERE E LASCIAR CORRERE I PROFITTI". Impostiamo trade con stop-loss stretti in punti chiave del grafico e take profit medio-lunghi. Questo ci permette di bloccare le perdite e andare in positivo con la prima operazione che parte nella direzione giusta. La caratteristica distintiva della nostra strategia è il suo adattamento anche ai conti medio-piccoli grazie agli stop loss stretti che permettono draw-down minimi evitando perdite significative, al contrario di molti trader che non usano stop-loss e ti fanno bruciare il conto.',
                     expanded: false,
                 },
                 {
-                    question: "2. Potrò prelevare subito i guadagni?",
-                    answer: "Assolutamente si, potrai prelevare in ogni momento i guadagni che avrai generato con noi attraverso il tuo metodo di pagamento preferito e non avrai alcun vincolo.",
+                    question: "L’ACCESSO AL GRUPPO PRIVATO “ELITE” E’ DAVVERO GRATUITO?",
+                    answer: "Si, l’accesso al Gruppo è totalmente gratuito, così come sono gratuiti tutti i servizi che trovi al suo interno, l’unico vincolo è fare trading con il nostro Broker partner.",
                     expanded: false,
                 },
                 {

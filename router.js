@@ -14,6 +14,12 @@ const router = createRouter({
             name: 'Faq',
             component: () => import('./src/components/pages/Faq.vue')
         },
+
+        {
+            path: '/shop',
+            name: 'Shop',
+            component: () => import('./src/components/pages/Shop.vue')
+        },
     ],
     /* scrollBehavior(to, from, savedPosition) {
         // Scrolla in cima alla pagina quando si effettua la navigazione
