@@ -1,6 +1,22 @@
 // Media query per tablet
 @media screen and (max-width: 1023px) {
-    #contactform-container {}
+
+
+    ////////////////////
+    //JUMBOTRON
+    ////////////////////
+    #jumbotron-title {
+        padding: 0 15%;
+        font-size: 61px;
+        text-align: center;
+
+        #jumbotron-span {
+            font-size: 50px;
+            text-align: center;
+            color: #ECC01B;
+            -webkit-text-stroke: 2px black;
+        }
+    }
 }
 
 
@@ -19,7 +35,16 @@
 
 // Media query per dispositivi mobili
 @media screen and (max-width: 599px) {
-    #contactform-container {
-        // Stili per dispositivi mobili
+    #jumbotron-title {
+        padding: 0 15%;
+        font-size: 61px;
+        text-align: center;
+
+        #jumbotron-span {
+            font-size: 50px;
+            text-align: center;
+            color: #ECC01B;
+            -webkit-text-stroke: 2px black;
+        }
     }
 }
