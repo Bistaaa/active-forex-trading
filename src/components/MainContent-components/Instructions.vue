@@ -19,29 +19,38 @@ export default {
 
 <template>
     <div id="instruction-container">
-        <h2>STEP NECESSARI</h2>
+        <h2 id="instruction-title">STEP NECESSARI</h2>
         <div id="steps-container">
             <div class="steps-column">
-                <h3>Compila il form</h3>
-                <span>Compila il form lasciando i tuoi dati di contatto e scarica l'E-book</span>
+                <h3 class="second-instruction-title">Compila il form</h3>
+                <span class="instruction-description">Compila il form lasciando i tuoi dati di contatto e scarica
+                    l'E-book</span>
             </div>
             <div class="arrow-container">
                 <span class="right-arrow">
                     <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
                 </span>
+                <span class="down-arrow">
+                    <font-awesome-icon icon="fa-solid fa-arrow-down-long" />
+                </span>
             </div>
             <div class="steps-column">
-                <h3>Call conoscitiva</h3>
-                <span>Ti contattiamo per illustrarti il servizio, come accedere e rispondere alle tue domande </span>
+                <h3 class="second-instruction-title">Call conoscitiva</h3>
+                <span class="instruction-description">Ti contattiamo per illustrarti il servizio, come accedere e rispondere
+                    alle tue domande </span>
             </div>
             <div class="arrow-container">
                 <span class="right-arrow">
                     <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
                 </span>
+                <span class="down-arrow">
+                    <font-awesome-icon icon="fa-solid fa-arrow-down-long" />
+                </span>
             </div>
             <div class="steps-column">
-                <h3>Accedi al gruppo privato "Elite"</h3>
-                <span>Sei dentro! Approfitta di tutti i servizi gratuiti che offriamo!</span>
+                <h3 class="second-instruction-title">Accedi al gruppo privato "Elite"</h3>
+                <span class="instruction-description">Sei dentro! Approfitta di tutti i servizi gratuiti che
+                    offriamo!</span>
             </div>
         </div>
         <div class="vip-button-container">
@@ -55,11 +64,17 @@ export default {
     background-color: #ECC01B;
     padding: 100px 10%;
 
-    h2 {
+    #instruction-title {
         font-size: 65px;
         text-align: center;
         text-decoration: underline;
         margin-bottom: 100px;
+    }
+
+    @media screen and (max-width: 601px) {
+        #instruction-title {
+            font-size: 55px;
+        }
     }
 
     #steps-container {
@@ -77,15 +92,32 @@ export default {
             border-top: 4px dotted #000000;
             border-bottom: 4px dotted #000000;
 
-            h3 {
+            .second-instruction-title {
                 font-size: 45px;
                 text-align: center;
                 line-height: 50px;
             }
 
-            span {
+            .instruction-description {
                 font-size: 25px;
                 text-align: center;
+            }
+
+            @media screen and (max-width: 601px) {
+                .second-instruction-title {
+                    font-size: 40px;
+                    line-height: 45px;
+                }
+
+                .instruction-description {
+                    font-size: 23px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 901px) {
+            .steps-column {
+                width: 80%;
             }
         }
 
@@ -100,7 +132,41 @@ export default {
                 height: 100%;
                 padding-top: 30px;
             }
+
+            .down-arrow {
+                display: none;
+            }
+
+            @media screen and (max-width: 901px) {
+                .right-arrow {
+                    display: none;
+                }
+
+                .down-arrow {
+                    display: block;
+                    margin: 20px 0;
+                }
+            }
         }
+    }
+
+    @media screen and (max-width: 901px) {
+        #steps-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 901px) {
+    #instruction-container {
+        padding: 100px 7%;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    #instruction-container {
+        padding: 100px 3%;
     }
 }
 </style>
