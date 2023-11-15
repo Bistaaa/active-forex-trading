@@ -22,9 +22,12 @@ export default {
         <p class="category-icon">
             <font-awesome-icon icon="fa-solid fa-user" />
         </p>
-        <h2>CHI SONO</h2>
+        <h2 id="personalinfo-title">CHI SONO</h2>
         <div id="personalinfo-main-content">
             <div id="personalinfo-upper-content">
+                <div class="personalinfo-image-container">
+                    <img src="../../assets/img/personalinfo-first-image.png" class="personalinfo-image" alt="">
+                </div>
                 <p class="personalinfo-text">Sono Riccardo Bistarelli, il fondatore di Active Forex Trading.
                     <br>
                     <br>
@@ -58,6 +61,9 @@ export default {
             </div>
 
             <div id="personalinfo-bottom-content">
+                <div class="personalinfo-image-container">
+                    <img src="../../assets/img/personalinfo-first-image.png" class="personalinfo-image" alt="">
+                </div>
                 <p class="personalinfo-text">
                     Nel corso degli anni, ho ideato diverse tecniche di trading che si integrano perfettamente con la mia
                     strategia, inclusa l'innovativa tecnica "BIDIREZIONALE" e il relativo "Bidirectional Mapping": una
@@ -96,18 +102,24 @@ export default {
     background-color: #ECC01B;
     padding: 100px 10%;
 
-    h2 {
+    #personalinfo-title {
         font-size: 65px;
         text-align: center;
         text-decoration: underline;
         margin-bottom: 100px;
     }
 
+    @media screen and (max-width: 601px) {
+        #personalinfo-title {
+            font-size: 50px;
+        }
+    }
+
     #personalinfo-main-content {
         margin-bottom: 100px;
 
         #personalinfo-upper-content {
-            background-image: url(../../assets/img/4.png);
+            background-image: url(../../assets/img/personalinfo-first-image.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right;
@@ -120,10 +132,26 @@ export default {
                 font-size: 20px;
                 text-align: justify;
             }
+
+            @media screen and (max-width: 601px) {
+                .personalinfo-text {
+                    font-size: 18px;
+                }
+            }
+
+            .personalinfo-image-container {
+                display: none;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .personalinfo-image {
+                    width: 100%;
+                }
+            }
         }
 
         #personalinfo-bottom-content {
-            background-image: url(../../assets/img/4.png);
+            background-image: url(../../assets/img/personalinfo-first-image.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: left;
@@ -136,6 +164,69 @@ export default {
                 padding-left: 50px;
                 font-size: 20px;
                 text-align: justify;
+            }
+
+            @media screen and (max-width: 601px) {
+                .personalinfo-text {
+                    font-size: 18px;
+                }
+            }
+
+            .personalinfo-image-container {
+                display: none;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .personalinfo-image {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 901px) {
+            #personalinfo-upper-content {
+                background-image: none;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right;
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .personalinfo-text {
+                    background-color: #ECC01B;
+                    width: 100%;
+                    padding-right: 0;
+                    font-size: 20px;
+                    text-align: justify;
+                }
+
+                .personalinfo-image-container {
+                    display: block;
+                }
+            }
+
+            #personalinfo-bottom-content {
+                background-image: none;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .personalinfo-text {
+                    background-color: #ECC01B;
+                    width: 100%;
+                    padding-left: 0;
+                    font-size: 20px;
+                    text-align: justify;
+                }
+
+                .personalinfo-image-container {
+                    display: block;
+                }
             }
         }
 
