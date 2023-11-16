@@ -28,7 +28,7 @@ export default {
             <p class="category-icon">
                 <font-awesome-icon icon="fa-solid fa-video" />
             </p>
-            <h2>I MIEI ULTIMI VIDEO</h2>
+            <h2 id="my-videos-title">I MIEI ULTIMI VIDEO</h2>
             <div id="videos-container">
                 <div class="single-video-container" v-for="video in videos" :key="video.id">
                     <a :href="'https://www.youtube.com/watch?v=' + video.id.videoId" target="_blank">
@@ -62,12 +62,18 @@ export default {
         flex-direction: column;
         align-items: center;
 
-        h2 {
+        #my-videos-title {
             color: #000000;
             font-size: 65px;
             text-align: center;
             text-decoration: underline;
             margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 601px) {
+            #my-videos-title {
+                font-size: 50px;
+            }
         }
 
         #videos-container {
@@ -115,6 +121,33 @@ export default {
 
                 .video-title-container {
                     margin-top: 10px;
+                }
+
+                @media screen and (max-width: 901px) {
+                    .video-title-container {
+                        margin-top: 10px;
+                        font-size: 16px;
+                    }
+                }
+
+                @media screen and (max-width: 901px) {
+                    .video-title-container {
+                        margin-top: 5px;
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 901px) {
+                .single-video-container {
+                    width: calc(100% / 3);
+                }
+            }
+
+            @media screen and (max-width: 601px) {
+                .single-video-container {
+                    width: calc(100% / 2);
+                    padding: 15px 10px;
                 }
             }
         }
@@ -194,6 +227,12 @@ export default {
             &:active {
                 transform: scale(0.9);
             }
+        }
+    }
+
+    @media screen and (max-width: 901px) {
+        #my-videos-content-container {
+            padding: 100px 5%;
         }
     }
 }
