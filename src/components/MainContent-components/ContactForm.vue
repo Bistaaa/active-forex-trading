@@ -206,6 +206,23 @@ export default {
   align-items: center;
   overflow-y: auto;
 
+  /* &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #D62929;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #A61D1D;
+  } */
+
   .hide-form {
     display: none;
   }
@@ -511,7 +528,6 @@ export default {
 #button-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
 
   #animation-container {
     position: relative;
