@@ -54,7 +54,7 @@ export default {
         <p class="category-icon">
             <font-awesome-icon icon="fa-solid fa-chart-line" />
         </p>
-        <h2>I MIGLIORI TRADE DELL'ANNO</h2>
+        <h2 id="best-trades-title">I MIGLIORI TRADE DELL'ANNO</h2>
         <div id="trades-container">
             <div class="single-trade-container" v-for="(image, index) in images" :key="index">
                 <div class="trade-image-container">
@@ -87,12 +87,18 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    h2 {
+    #best-trades-title {
         color: #000000;
         font-size: 65px;
         text-align: center;
         text-decoration: underline;
         margin-bottom: 70px;
+    }
+
+    @media screen and (max-width: 601px) {
+        #best-trades-title {
+            font-size: 45px;
+        }
     }
 
     #trades-container {
@@ -158,7 +164,19 @@ export default {
                         font-weight: bold;
                         color: #ffffff;
                     }
+
+                    @media screen and (max-width: 601px) {
+                        .trades-image-overlay-text {
+                            font-size: 13px;
+                        }
+                    }
                 }
+            }
+        }
+
+        @media screen and (max-width: 601px) {
+            .single-trade-container {
+                width: calc(100% / 2);
             }
         }
     }
@@ -181,6 +199,13 @@ export default {
         max-height: 80vh;
     }
 
+    @media screen and (max-width: 901px) {
+        .large-image {
+            max-width: 100vw;
+            max-height: 100vh;
+        }
+    }
+
     .close-trade-button {
         position: absolute;
         top: 25px;
@@ -192,10 +217,17 @@ export default {
         cursor: pointer;
         outline: none;
         padding: 0;
+        z-index: 21;
 
         &:hover {
             color: #FF0000;
         }
+    }
+}
+
+@media screen and (max-width: 901px) {
+    #best-trades-container {
+        padding: 100px 5%;
     }
 }
 </style>
