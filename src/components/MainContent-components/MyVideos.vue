@@ -73,6 +73,7 @@ export default {
         @media screen and (max-width: 601px) {
             #my-videos-title {
                 font-size: 50px;
+                margin-bottom: 50px;
             }
         }
 
