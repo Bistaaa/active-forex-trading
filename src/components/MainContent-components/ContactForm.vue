@@ -95,7 +95,7 @@ export default {
       <div id="form-logo-container">
         <img src="../../assets/img/white-logo.png" alt="">
       </div>
-      <h2>COMPILA IL FORM</h2>
+      <h2 id="form-title">COMPILA IL FORM</h2>
       <span id="form-explaination">e scarica l’E-book.</span>
       <div id="form-container">
         <form method="post" action="" ref="form" name="contact-form" id="contact-form" @submit.prevent="onFormSubmit">
@@ -246,12 +246,13 @@ export default {
       }
     }
 
-    h2 {
+    #form-title {
       color: #ffffff;
       font-size: 45px;
       text-align: center;
       margin-bottom: 0;
     }
+
 
     #form-explaination {
       color: #ffffff;
@@ -261,6 +262,23 @@ export default {
       font-size: 20px;
     }
 
+    @media screen and (max-width: 601px) {
+      #form-logo-container {
+        width: 20%;
+      }
+
+      #form-title {
+        font-size: 35px;
+        margin-bottom: 0;
+      }
+
+      #form-explaination {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 20px;
+      }
+    }
+
     .close-button {
       position: absolute;
       top: 15px;
@@ -268,14 +286,14 @@ export default {
       background: none;
       border: none;
       font-size: 24px;
-      color: #ffffff;
+      color: #FF0000;
       cursor: pointer;
       outline: none;
       padding: 0;
     }
 
     .close-button:hover {
-      color: #FF0000;
+      color: #ffffff;
     }
 
     #form-container {
@@ -316,6 +334,17 @@ export default {
           translate: 10px -14px;
           scale: 0.8;
           background-color: #1B1717;
+        }
+
+        @media screen and (max-width: 601px) {
+          .input-group-input {
+            padding: 10px;
+            font-size: 15px;
+            line-height: 17px;
+            border: 2px solid #ffffff;
+            ;
+            outline: none;
+          }
         }
       }
 
@@ -374,12 +403,25 @@ export default {
             color: #ffffff;
           }
         }
+
+        @media screen and (max-width: 601px) {
+          span {
+            font-size: 11px;
+            margin-left: 20px;
+          }
+        }
       }
 
       .error-message {
         color: red;
         font-size: 14px;
         margin-top: 5px;
+      }
+    }
+
+    @media screen and (max-width: 601px) {
+      #form-container {
+        width: 80%;
       }
     }
 
@@ -460,13 +502,13 @@ export default {
       background: none;
       border: none;
       font-size: 24px;
-      color: #ffffff;
+      color: #FF0000;
       cursor: pointer;
       outline: none;
       padding: 0;
 
       &:hover {
-        color: #FF0000;
+        color: #ffffff;
       }
     }
 
@@ -488,6 +530,25 @@ export default {
     #second-page-contact-span {
       font-size: 30px;
       margin-bottom: 100px;
+    }
+
+    @media screen and (max-width: 601px) {
+      #form-logo-container {
+        width: 20%;
+      }
+
+      #second-page-title {
+        font-size: 35px;
+        margin-bottom: 25px;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      #second-page-contact-span {
+        font-size: 22px;
+        margin-bottom: 100px;
+        text-align: center;
+      }
     }
 
     #second-page-link-container {
@@ -522,6 +583,33 @@ export default {
         }
       }
     }
+
+    @media screen and (max-width: 601px) {
+      #second-page-link-container {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 601px) {
+    #second-page-form {
+      padding: 10px 0 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 901px) {
+  #contactform-container {
+    max-height: 90vh;
+    width: 95vw;
+    border-radius: 30px;
+    padding: 0 5% 50px;
+    background: #1B1717;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
   }
 }
 
