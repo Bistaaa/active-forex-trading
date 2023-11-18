@@ -213,14 +213,14 @@ export default {
         background: none;
         border: none;
         font-size: 35px;
-        color: #ffffff;
+        color: #FF0000;
         cursor: pointer;
         outline: none;
         padding: 0;
         z-index: 21;
 
         &:hover {
-            color: #FF0000;
+            color: #ffffff;
         }
     }
 }

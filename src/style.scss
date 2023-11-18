@@ -77,6 +77,13 @@
           }
       }
 
+      @media screen and (max-width: 601px) {
+          .vip-button {
+              padding: 7px 15px;
+              font-size: 25px;
+          }
+      }
+
       .vip-button::before {
           content: '';
           position: absolute;
