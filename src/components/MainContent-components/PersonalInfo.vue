@@ -25,8 +25,8 @@ export default {
         <h2 id="personalinfo-title">CHI SONO</h2>
         <div id="personalinfo-main-content">
             <div id="personalinfo-upper-content">
-                <div class="personalinfo-image-container">
-                    <img src="../../assets/img/personalinfo-first-image.png" class="personalinfo-image" alt="">
+                <div class="personalinfo-image-container" id="personalinfo-image-container-mobile">
+                    <img src="../../assets/img/presentazione.jpg" class="personalinfo-image" alt="">
                 </div>
                 <p class="personalinfo-text">Sono Riccardo Bistarelli, il fondatore di Active Forex Trading.
                     <br>
@@ -58,6 +58,9 @@ export default {
                     <br>
                     <br>
                 </p>
+                <div class="personalinfo-image-container" id="personalinfo-image-container-desktop">
+                    <img src="../../assets/img/presentazione.jpg" class="personalinfo-image" alt="">
+                </div>
             </div>
 
             <div id="personalinfo-bottom-content">
@@ -119,15 +122,13 @@ export default {
         margin-bottom: 100px;
 
         #personalinfo-upper-content {
-            background-image: url(../../assets/img/personalinfo-first-image.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: right;
+            display: flex;
+            align-items: center;
             margin-bottom: 100px;
 
             .personalinfo-text {
                 background-color: #ECC01B;
-                width: 65%;
+                width: 60%;
                 padding-right: 50px;
                 font-size: 20px;
                 text-align: justify;
@@ -140,27 +141,45 @@ export default {
             }
 
             .personalinfo-image-container {
-                display: none;
-                width: 100%;
-                margin-bottom: 40px;
+                width: 40%;
 
                 .personalinfo-image {
                     width: 100%;
                 }
             }
+
+            #personalinfo-image-container-mobile {
+                display: none;
+            }
+
+            #personalinfo-image-container-desktop {
+                display: block;
+            }
+
+            @media screen and (max-width: 901px) {
+                #personalinfo-image-container-mobile {
+                    display: block;
+                }
+
+                #personalinfo-image-container-desktop {
+                    display: none;
+                }
+
+                .personalinfo-image-container {
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+            }
         }
 
         #personalinfo-bottom-content {
-            background-image: url(../../assets/img/personalinfo-first-image.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: left;
             display: flex;
-            justify-content: end;
+            justify-content: center;
+            align-items: center;
 
             .personalinfo-text {
                 background-color: #ECC01B;
-                width: 65%;
+                width: 60%;
                 padding-left: 50px;
                 font-size: 20px;
                 text-align: justify;
@@ -173,9 +192,7 @@ export default {
             }
 
             .personalinfo-image-container {
-                display: none;
-                width: 100%;
-                margin-bottom: 40px;
+                width: 40%;
 
                 .personalinfo-image {
                     width: 100%;
@@ -226,6 +243,13 @@ export default {
 
                 .personalinfo-image-container {
                     display: block;
+                }
+
+                @media screen and (max-width: 901px) {
+                    .personalinfo-image-container {
+                        width: 100%;
+                        margin-bottom: 50px;
+                    }
                 }
             }
         }

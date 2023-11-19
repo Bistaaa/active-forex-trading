@@ -56,7 +56,7 @@ export default {
     },
 
     sendEmail() {
-      emailjs.sendForm('service_gwc7vhp', 'template_bpcot7h', this.$refs.form, 'haD2fBk5CrUugoVrd')
+      emailjs.sendForm('service_77cvccw', 'template_wo0rwek', this.$refs.form, '6icwihSvMBfuBbUal')
         .then((result) => {
           console.log('SUCCESS!', result.text);
         }, (error) => {
@@ -65,7 +65,7 @@ export default {
     },
 
     submitForm() {
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzWIK8GhNWmIRr7Je-BJUlnQSWQCI-OJtDYmVSPu4WJOe0cT-zOQVDqnvqK6hBApS5z/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbylZ0QHirhHdHTKC2R-kMllEcjTka8VhEGaB-WD-JVOeeS4GFy5EctCHBQGmET-tiRz/exec';
       const form = document.forms['contact-form'];
 
       // Fetch request to submit the form data
