@@ -48,8 +48,8 @@ export default {
                 <span class="nav-link" @click="scrollToElement('personalinfo-container')">Chi Sono</span>
                 <span class="nav-link" @click="scrollToElement('ebook-overall-container')">E-Book</span>
                 <span class="nav-link" @click="scrollToElement('footer-container')">Contatti</span>
-                <span class="nav-link" @click="navigateTo('/faq')">FAQ</span>
-                <span class="nav-link" @click="navigateTo('/shop')">I Nostri Corsi</span>
+                <!-- <span class="nav-link" @click="navigateTo('/faq')">FAQ</span>
+                <span class="nav-link" @click="navigateTo('/shop')">I Nostri Corsi</span> -->
             </div>
             <div id="vip-button-container-header">
                 <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
@@ -72,8 +72,8 @@ export default {
                     @click="() => { toggleSmallNavMenu(); scrollToElement('ebook-overall-container'); }">E-Book</span>
                 <span class="nav-link"
                     @click="() => { toggleSmallNavMenu(); scrollToElement('footer-container'); }">Contatti</span>
-                <span class="nav-link" @click="() => { toggleSmallNavMenu(); navigateTo('/faq'); }">FAQ</span>
-                <span class="nav-link" @click="() => { toggleSmallNavMenu(); navigateTo('/shop'); }">I Nostri Corsi</span>
+                <!-- <span class="nav-link" @click="() => { toggleSmallNavMenu(); navigateTo('/faq'); }">FAQ</span>
+                <span class="nav-link" @click="() => { toggleSmallNavMenu(); navigateTo('/shop'); }">I Nostri Corsi</span> -->
 
 
                 <div id="vip-button-container-nav-menu">

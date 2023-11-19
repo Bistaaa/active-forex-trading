@@ -120,12 +120,12 @@ export default {
                         <div class="footer-menu-row">
                             <span class="footer-menu-row-data" @click="scrollToElement('footer-container')">Contatti</span>
                         </div>
-                        <div class="footer-menu-row">
+                        <!-- <div class="footer-menu-row">
                             <span class="footer-menu-row-data" @click="navigateTo('/faq')">FAQ</span>
                         </div>
                         <div class="footer-menu-row">
                             <span class="footer-menu-row-data" @click="navigateTo('/shop')">I Nostri Corsi</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
