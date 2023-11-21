@@ -65,7 +65,7 @@ export default {
 
             <div id="personalinfo-bottom-content">
                 <div class="personalinfo-image-container">
-                    <img src="../../assets/img/personalinfo-first-image.png" class="personalinfo-image" alt="">
+                    <img src="../../assets/img/presentazione2.jpg" class="personalinfo-image" alt="">
                 </div>
                 <p class="personalinfo-text">
                     Nel corso degli anni, ho ideato diverse tecniche di trading che si integrano perfettamente con la mia
@@ -144,6 +144,7 @@ export default {
                 width: 40%;
 
                 .personalinfo-image {
+                    border-radius: 20px;
                     width: 100%;
                 }
             }
@@ -196,6 +197,7 @@ export default {
 
                 .personalinfo-image {
                     width: 100%;
+                    border-radius: 20px;
                 }
             }
         }

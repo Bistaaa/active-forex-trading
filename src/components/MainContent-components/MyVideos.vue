@@ -18,6 +18,9 @@ export default {
                 console.log(data.items);
                 this.videos = data.items;
             })
+            .catch((error) => {
+                console.error("Si è verificato un errore durante la chiamata API:", error);
+            });
     },
 }
 </script>
