@@ -63,8 +63,7 @@ export default {
         <div id="trades-container">
             <div class="single-trade-container" v-for="(image, index) in images" :key="index">
                 <div class="trade-image-container">
-                    <img :src="'../../assets/img/best-trades/' + image" class="trades-image" alt="Trade-Image" />
-                    <!-- <img src="../../assets/img/best-trades/trade-01.jpg" class="trades-image" alt="Trade-Image"> -->
+                    <img :src="'img/best-trades/' + image" class="trades-image" alt="Trade-Image" />
                     <div class="trades-image-overlay-container" @click="openImage(image)">
                         <img src="../../assets/img/overlays/Overlay-60.png" class="trades-image-overlay" alt="">
                         <span class="trades-image-overlay-text">VISUALIZZA <br> A SCHERMO INTERO</span>
@@ -78,7 +77,7 @@ export default {
 
         <!-- Visualizza l'immagine ingrandita -->
         <div v-if="showLargeImage" class="large-image-container">
-            <img :src="'src/assets/img/best-trades/' + largeImage" class="large-image" alt="Large Image" />
+            <img :src="'img/best-trades/' + largeImage" class="large-image" alt="Large Image" />
             <button class="close-trade-button" @click="closeImage">&#10006;</button>
         </div>
     </div>
