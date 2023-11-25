@@ -1,78 +1,61 @@
 <script>
-
 export default {
     name: 'Shop',
-    data: function () {
+    data() {
         return {
-            loaded: false,
-            paidFor: false,
-            product: {
-                price: 149.99,
-                name: "the lamp",
-                description: "leg lamp from that one movie",
-                img: "./assets/lamp.jpg"
-            }
+            selectedItemID: null,
+            items: [
+                { id: 1, name: 'Corso', price: 300 },
+                { id: 2, name: '1 to 1', price: 100 },
+                { id: 3, name: 'Indicatore', price: 500 },
+            ]
         };
     },
-    mounted() {
-        const script = document.createElement("script");
-        script.src =
-            "https://www.paypal.com/sdk/js?client-id=AYROxkOqU2jNT3TuxNZasuUMfLzO9BnX9o8E-BnVWulilXAAhxasZiLLfrp7217FHl-4oow9wGmRm98W";
-        script.addEventListener("load", this.setLoaded);
-        document.body.appendChild(script);
-    },
     methods: {
-        setLoaded() {
-            this.loaded = true;
-            window.paypal
-                .Buttons({
-                    createOrder: (data, actions) => {
-                        return actions.order.create({
-                            purchase_units: [
-                                {
-                                    description: this.product.name,
-                                    amount: {
-                                        currency_code: "EUR",
-                                        value: this.product.price
-                                    }
-                                }
-                            ]
-                        });
-                    },
-                    onApprove: async (data, actions) => {
-                        const order = await actions.order.capture();
-                        this.paidFor = true;
-                        console.log(order);
-                    },
-                    onError: err => {
-                        console.log(err);
-                    }
-                })
-                .render(this.$refs.paypal);
-        }
+        handleSelection() {
+            console.log('Elemento selezionato:', this.selectedItemID);
+            const selectedItemObject = this.items.find(item => item.id == this.selectedItemID)
+            console.log(selectedItemObject.price);
+
+            window.paypal.Buttons({
+                createOrder(data, actions) {
+                    console.log(data, actions)
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: selectedItemObject.price
+                            }
+                        }]
+                    })
+                },
+                onApprove(data, actions) {
+                    return actions.order.capture().then(function (details) {
+                        console.log('Transaction completed by ' + details.payer.name.given_name);
+                    });
+                },
+                onError(error) {
+                    console.log(error);
+                },
+            }).render("#paypal-buttons")
+        },
     }
-};
+}
 </script>
+
+
 
 
 
 <template>
     <div id="shop-overall-container">
-        <div v-if="!paidFor">
-            <h1>{{ product.name }}</h1>
-
-            <p>{{ product.description }}</p>
-            <p>{{ product.price }} $</p>
-
-        </div>
-
-        <div v-if="paidFor">
-            <h1>Noice, you bought a beautiful lamp!</h1>
-        </div>
-
-        <div ref="paypal"></div>
+        <label for="items">Seleziona un frutto:</label>
+        <select id="items" v-model="selectedItemID" @change="handleSelection">
+            <option v-for="item in items" :key="item.id" :value="item.id">{{ item.name }}</option>
+        </select>
     </div>
+    <div id="paypal-buttons"></div>
 </template>
+
   
 
   
