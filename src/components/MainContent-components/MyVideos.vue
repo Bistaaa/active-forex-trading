@@ -15,7 +15,6 @@ export default {
                 return data.json();
             })
             .then((data) => {
-                console.log(data.items);
                 this.videos = data.items;
             })
             .catch((error) => {

@@ -33,11 +33,6 @@ export default {
         };
     },
 
-    mounted() {
-        console.log('../../assets/img/best-trades/' + this.images[0]);
-        console.log('../../assets/img/best-trades/' + this.images[1]);
-    },
-
     methods: {
         openImage(image) {
             this.largeImage = image;
