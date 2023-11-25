@@ -7,7 +7,18 @@ export default {
             showSubMenuLinks: false,
         };
     },
+    mounted() {
+        this.loadIubendaScript();
+    },
     methods: {
+        loadIubendaScript() {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.iubenda.com/iubenda.js';
+            script.async = true;
+
+            document.head.appendChild(script);
+        },
+
         scrollToElement(elementId) {
             this.$router.push('/');
 
@@ -229,6 +240,18 @@ export default {
             </div>
             <span class="bottom-footer-info" id="owner">Active Forex Trading di Bistarelli Riccardo</span>
             <span class="bottom-footer-info" id="owner-vat-number">P.IVA: 03832340545</span>
+            <div id="policies-container">
+
+                <!-- Privacy Policy -->
+                <a href="https://www.iubenda.com/privacy-policy/25318288"
+                    class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Privacy Policy">Privacy
+                    Policy</a>
+
+                <!-- Cookie Policy -->
+                <a href="https://www.iubenda.com/privacy-policy/25318288/cookie-policy"
+                    class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Cookie Policy">Cookie
+                    Policy</a>
+            </div>
             <div id="bottom-informations"></div>
         </div>
     </div>
@@ -665,6 +688,11 @@ export default {
         #owner-vat-number {
             text-align: center;
             margin-bottom: 40px;
+        }
+
+        #policies-container {
+            display: flex;
+            gap: 10px;
         }
     }
 }
