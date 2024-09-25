@@ -49,7 +49,7 @@ export default {
                 <span class="nav-link" @click="scrollToElement('ebook-overall-container')">E-Book</span>
                 <span class="nav-link" @click="scrollToElement('footer-container')">Contatti</span>
                 <span class="nav-link" @click="navigateTo('/faq')">FAQ</span>
-                <!-- <span class="nav-link" @click="navigateTo('/shop')">I Nostri Corsi</span> -->
+                <span class="nav-link" @click="navigateTo('/shop')">I Nostri Corsi</span>
             </div>
             <div id="vip-button-container-header">
                 <button class="vip-button" @click="ShowForm">Sblocca gratis il gruppo Elite</button>
@@ -64,7 +64,8 @@ export default {
 
             <div id="small-nav-menu"
                 :class="{ 'show-small-nav-menu': showSmallNavMenu, 'hide-small-nav-menu': !showSmallNavMenu }">
-                <span class="nav-link" @click="() => { toggleSmallNavMenu(); scrollToElement('mystrategy-container'); }">La
+                <span class="nav-link"
+                    @click="() => { toggleSmallNavMenu(); scrollToElement('mystrategy-container'); }">La
                     Strategia</span>
                 <span class="nav-link"
                     @click="() => { toggleSmallNavMenu(); scrollToElement('personalinfo-container'); }">Chi Sono</span>
@@ -77,7 +78,8 @@ export default {
 
 
                 <div id="vip-button-container-nav-menu">
-                    <button class="vip-button" @click="() => { toggleSmallNavMenu(); ShowForm(); }">Sblocca gratis il gruppo
+                    <button class="vip-button" @click="() => { toggleSmallNavMenu(); ShowForm(); }">Sblocca gratis il
+                        gruppo
                         Elite</button>
                 </div>
             </div>
@@ -88,7 +90,7 @@ export default {
         </div>
     </div>
 </template>
-  
+
 <style scoped lang="scss">
 #header-container {
     width: 100%;
@@ -383,8 +385,8 @@ export default {
             #small-nav-logo {
                 height: 80%;
 
+
                 img {
-                    width: 100%;
                     height: 100%;
                     background-size: contain;
                 }
@@ -393,4 +395,3 @@ export default {
     }
 }
 </style>
-  

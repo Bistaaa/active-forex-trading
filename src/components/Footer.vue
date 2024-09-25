@@ -117,7 +117,8 @@ export default {
                     </div>
                     <div class="footer-sub-menu" v-show="showSubMenuLinks">
                         <div class="footer-menu-row">
-                            <span class="footer-menu-row-data" @click="scrollToElement('mystrategy-container')"> Strategia
+                            <span class="footer-menu-row-data" @click="scrollToElement('mystrategy-container')">
+                                Strategia
                             </span>
                         </div>
                         <div div class="footer-menu-row">
@@ -129,7 +130,8 @@ export default {
                                 @click="scrollToElement('ebook-overall-container')">E-Book</span>
                         </div>
                         <div class="footer-menu-row">
-                            <span class="footer-menu-row-data" @click="scrollToElement('footer-container')">Contatti</span>
+                            <span class="footer-menu-row-data"
+                                @click="scrollToElement('footer-container')">Contatti</span>
                         </div>
                         <div class="footer-menu-row">
                             <span class="footer-menu-row-data" @click="navigateTo('/faq')">FAQ</span>
@@ -168,7 +170,8 @@ export default {
                         <div class="footer-menu-row">
                             <a href="https://wa.me/message/POHA3ZSPWN73D1" target="_blank">
                                 <div class="footer-menu-row-icon-container" id="whatsapp-menu-background">
-                                    <img src="../assets/img/social-icons/whatsapp-icon.png" class="footer-social-icon" />
+                                    <img src="../assets/img/social-icons/whatsapp-icon.png"
+                                        class="footer-social-icon" />
                                 </div>
                                 <span class="footer-menu-row-data">+39 3383525888</span>
                             </a>
@@ -176,7 +179,8 @@ export default {
                         <div class="footer-menu-row">
                             <a href="https://t.me/Riccardobista" target="_blank">
                                 <div class="footer-menu-row-icon-container" id="telegram-menu-background">
-                                    <img src="../assets/img/social-icons/telegram-icon.png" class="footer-social-icon" />
+                                    <img src="../assets/img/social-icons/telegram-icon.png"
+                                        class="footer-social-icon" />
                                 </div>
                                 <span class="footer-menu-row-data">@Riccardobista</span>
                             </a>
@@ -214,22 +218,26 @@ export default {
                 </a>
                 <a href="https://t.me/activeforexbase" target="_blank">
                     <div class="social-icon-background" id="telegram-background">
-                        <img src="../assets/img/social-icons/telegram-icon.png" class="social-icon" id="telegram-icon" />
+                        <img src="../assets/img/social-icons/telegram-icon.png" class="social-icon"
+                            id="telegram-icon" />
                     </div>
                 </a>
                 <a href="https://www.instagram.com/active_forex_trading_/" target="_blank">
                     <div class="social-icon-background" id="instagram-background">
-                        <img src="../assets/img/social-icons/instagram-icon.png" class="social-icon" id="instagram-icon" />
+                        <img src="../assets/img/social-icons/instagram-icon.png" class="social-icon"
+                            id="instagram-icon" />
                     </div>
                 </a>
                 <a href="https://www.facebook.com/activeforextrading.it" target="_blank">
                     <div class="social-icon-background" id="facebook-background">
-                        <img src="../assets/img/social-icons/facebook-icon.png" class="social-icon" id="facebook-icon" />
+                        <img src="../assets/img/social-icons/facebook-icon.png" class="social-icon"
+                            id="facebook-icon" />
                     </div>
                 </a>
                 <a href="https://wa.me/message/POHA3ZSPWN73D1" target="_blank">
                     <div class="social-icon-background" id="whatsapp-background">
-                        <img src="../assets/img/social-icons/whatsapp-icon.png" class="social-icon" id="whatsapp-icon" />
+                        <img src="../assets/img/social-icons/whatsapp-icon.png" class="social-icon"
+                            id="whatsapp-icon" />
                     </div>
                 </a>
                 <a href="mailto:info@activeforextrading.it" target="_blank">
@@ -252,12 +260,12 @@ export default {
                     class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Cookie Policy">Cookie
                     Policy</a>
             </div>
-            <p id="bottom-informations">Sito progettato e sviluppato da <a href="mailto:michele.bistarelli.mb@outlook.it"
+            <p id="bottom-informations">Sito progettato e sviluppato da <a href="https://www.michelebistarelli.it/"
                     target="_blank">Michele Bistarelli</a></p>
         </div>
     </div>
 </template>
-  
+
 
 <style scoped lang="scss">
 #footer-container {

@@ -31,18 +31,15 @@ export default {
                 <p class="personalinfo-text">Sono Riccardo Bistarelli, il fondatore di Active Forex Trading.
                     <br>
                     <br>
-                    La mia avventura in questo settore ha inizio nel 2021, ma è il risultato di oltre 25 anni di esperienza
-                    nel
-                    mondo finanziario. Durante il mio percorso,
+                    La mia avventura nel mondo finanziario ha inizio ben 25 anni fa, nel 1998. Durante il mio percorso,
                     ho esplorato diverse sfaccettature degli investimenti, iniziando con le tradizionali operazioni in borsa
-                    e
-                    successivamente muovendomi nel mondo del Forex e delle opzioni binarie. Alla fine, ho scelto di
+                    e successivamente muovendomi nel mondo del Forex e delle opzioni binarie. Alla fine, ho scelto di
                     specializzarmi nel Forex Valutario, nelle materie prime e negli indici.
                     <br>
                     <br>
                     La mia preparazione è il frutto di studi approfonditi in vari campi, tra cui l'analisi tecnica,
-                    l'analisi
-                    ciclica e l'analisi fondamentale. La mia specializzazione principale è l'analisi "PRICE ACTION", che ho
+                    l'analisi ciclica e l'analisi fondamentale. La mia specializzazione principale è l'analisi "PRICE
+                    ACTION", che ho
                     ulteriormente perfezionato con le conoscenze acquisite in due decenni di esperienza. Questa versione
                     "evoluta" dell'analisi tiene conto di conferme derivanti dalla mia vasta conoscenza tecnica, ciclica e
                     fondamentale.

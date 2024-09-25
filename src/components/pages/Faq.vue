@@ -31,7 +31,7 @@ export default {
                 {
                     question: `CHE ESPERIENZA AVETE?`,
                     answer:
-                        `La mia avventura in questo settore ha inizio nel 2021, ma è il risultato di oltre 25 anni di esperienza nel mondo finanziario. Durante il mio percorso, ho esplorato diverse sfaccettature degli investimenti, iniziando con le tradizionali operazioni in borsa e successivamente muovendomi nel mondo del Forex e delle opzioni binarie. Alla fine, ho scelto di specializzarmi nel Forex Valutario, nelle materie prime e negli indici.`,
+                        `La mia avventura nel mondo finanziario ha inizio ben 25 anni fa, nel 1998. Durante il mio percorso, ho esplorato diverse sfaccettature degli investimenti, iniziando con le tradizionali operazioni in borsa e successivamente muovendomi nel mondo del Forex e delle opzioni binarie. Alla fine, ho scelto di specializzarmi nel Forex Valutario, nelle materie prime e negli indici.`,
                     active: false,
                 },
                 {
