@@ -6,6 +6,7 @@ import PersonalInfo from './MainContent-components/PersonalInfo.vue';
 import Ebook from './MainContent-components/Ebook.vue';
 import BestTrades from './MainContent-components/BestTrades.vue';
 import MyVideos from './MainContent-components/MyVideos.vue';
+import Reviews from './MainContent-components/Reviews.vue';
 import ContactForm from './MainContent-components/ContactForm.vue';
 
 export default {
@@ -18,6 +19,7 @@ export default {
         Ebook,
         BestTrades,
         MyVideos,
+        Reviews,
         ContactForm,
     },
     data() {
@@ -37,6 +39,7 @@ export default {
         <Ebook />
         <BestTrades />
         <MyVideos />
+        <Reviews />
         <ContactForm />
     </div>
 </template>
