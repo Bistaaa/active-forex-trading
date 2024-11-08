@@ -59,16 +59,16 @@ export default {
                             <div class="footer-menu-row-icon-container" id="phone-menu-background">
                                 <img src="../assets/img/social-icons/phone-icon.png" class="footer-social-icon" />
                             </div>
-                            <a href="tel:+393517525890" target="_blank">
-                                <span class="footer-menu-row-data">+39 351 752 5890</span>
+                            <a href="tel:+393784194165" target="_blank">
+                                <span class="footer-menu-row-data">+39 378 419 4165</span>
                             </a>
                         </div>
                         <div class="footer-menu-row">
                             <div class="footer-menu-row-icon-container" id="whatsapp-menu-background">
                                 <img src="../assets/img/social-icons/whatsapp-icon.png" class="footer-social-icon" />
                             </div>
-                            <a href="https://wa.me/393517525890" target="_blank">
-                                <span class="footer-menu-row-data">+39 351 752 5890</span>
+                            <a href="https://wa.me/393784194165" target="_blank">
+                                <span class="footer-menu-row-data">+39 378 419 4165</span>
                             </a>
                         </div>
                         <div class="footer-menu-row">
@@ -160,20 +160,20 @@ export default {
                     </div>
                     <div class="footer-sub-menu">
                         <div class="footer-menu-row">
-                            <a href="tel:+393517525890" target="_blank">
+                            <a href="tel:+393784194165" target="_blank">
                                 <div class="footer-menu-row-icon-container" id="phone-menu-background">
                                     <img src="../assets/img/social-icons/phone-icon.png" class="footer-social-icon" />
                                 </div>
-                                <span class="footer-menu-row-data">+39 351 752 5890</span>
+                                <span class="footer-menu-row-data">+39 378 419 4165</span>
                             </a>
                         </div>
                         <div class="footer-menu-row">
-                            <a href="https://wa.me/393517525890" target="_blank">
+                            <a href="https://wa.me/393784194165" target="_blank">
                                 <div class="footer-menu-row-icon-container" id="whatsapp-menu-background">
                                     <img src="../assets/img/social-icons/whatsapp-icon.png"
                                         class="footer-social-icon" />
                                 </div>
-                                <span class="footer-menu-row-data">+39 351 752 5890</span>
+                                <span class="footer-menu-row-data">+39 378 419 4165</span>
                             </a>
                         </div>
                         <div class="footer-menu-row">
@@ -234,7 +234,7 @@ export default {
                             id="facebook-icon" />
                     </div>
                 </a>
-                <a href="https://wa.me/393517525890" target="_blank">
+                <a href="https://wa.me/393784194165" target="_blank">
                     <div class="social-icon-background" id="whatsapp-background">
                         <img src="../assets/img/social-icons/whatsapp-icon.png" class="social-icon"
                             id="whatsapp-icon" />

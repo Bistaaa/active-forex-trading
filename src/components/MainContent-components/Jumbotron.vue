@@ -45,19 +45,11 @@ export default {
           </div>
           <div class="bonus-container">
             <font-awesome-icon icon="fa-solid fa-check" />
-            <li>VIDEOAPPROFONDIMENTI "FULL IMMERSION"</li>
-          </div>
-          <div class="bonus-container">
-            <font-awesome-icon icon="fa-solid fa-check" />
             <li>VIDEOANALISI SETTIMANALI</li>
           </div>
           <div class="bonus-container">
             <font-awesome-icon icon="fa-solid fa-check" />
             <li>VIDEOANALISI "LAMPO" GIORNALIERE</li>
-          </div>
-          <div class="bonus-container">
-            <font-awesome-icon icon="fa-solid fa-check" />
-            <li>ACCESSO ALL'APPUNTAMENTO "SPAZIO ANALISI"</li>
           </div>
           <div class="bonus-container">
             <font-awesome-icon icon="fa-solid fa-check" />
@@ -70,14 +62,6 @@ export default {
           <div class="bonus-container">
             <font-awesome-icon icon="fa-solid fa-check" />
             <li>CONDIZIONI DI TRADING AGEVOLATE</li>
-          </div>
-          <div class="bonus-container">
-            <font-awesome-icon icon="fa-solid fa-check" />
-            <li>VPS GRATUITA</li>
-          </div>
-          <div class="bonus-container">
-            <font-awesome-icon icon="fa-solid fa-check" />
-            <li>RIMBORSO 5% SUL PRIMO DEPOSITO IN USDT</li>
           </div>
           <div class="bonus-container">
             <font-awesome-icon icon="fa-solid fa-check" />
