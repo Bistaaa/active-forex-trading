@@ -165,7 +165,7 @@ export default {
                 color: #ffffff;
                 border: 2px solid #ffffff;
                 border-radius: 34px;
-                background-color: #2FA9DA;
+                background-color: #000000;
                 font-weight: 600;
                 overflow: hidden;
                 transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
@@ -208,7 +208,7 @@ export default {
                 border-radius: inherit;
                 scale: 0;
                 z-index: -1;
-                background-color: #000000;
+                background-color: #fff;
                 transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
             }
 
@@ -217,9 +217,10 @@ export default {
             }
 
             .vip-button:hover {
-                color: #ffffff;
+                color: #000;
                 scale: 1.1;
                 box-shadow: 0 0px 20px #000000;
+                border: 2px solid #000;
             }
 
             .vip-button:active {
