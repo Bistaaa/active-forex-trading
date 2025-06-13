@@ -7,6 +7,7 @@ import Ebook from './MainContent-components/Ebook.vue';
 import BestTrades from './MainContent-components/BestTrades.vue';
 import MyVideos from './MainContent-components/MyVideos.vue';
 import Reviews from './MainContent-components/Reviews.vue';
+import Certifications from './MainContent-components/Certifications.vue';
 import ContactForm from './MainContent-components/ContactForm.vue';
 
 export default {
@@ -20,6 +21,7 @@ export default {
         BestTrades,
         MyVideos,
         Reviews,
+        Certifications,
         ContactForm,
     },
     data() {
@@ -40,6 +42,7 @@ export default {
         <BestTrades />
         <MyVideos />
         <Reviews />
+        <Certifications />
         <ContactForm />
     </div>
 </template>

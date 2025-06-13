@@ -38,11 +38,7 @@ export default {
 
 <template>
     <div id="footer-container">
-
-        <div id="upper-footer"></div>
-
-        <!-- LOWER FOOTER -->
-        <div id="lower-footer">
+        <div id="upper-footer">
 
             <!-- LEFT COLUMN -->
             <div class="footer-column" id="footer-container-left">
@@ -154,16 +150,6 @@ export default {
 #footer-container {
 
     #upper-footer {
-        background-color: #ECC01B;
-        padding: 50px 10% 80px;
-        height: 100px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* LOWER FOOTER */
-
-    #lower-footer {
         background-color: #111111;
         padding: 40px 0;
         display: flex;
@@ -200,8 +186,7 @@ export default {
 
         #footer-container-left {
             @media (max-width: 899px) {
-                order: 2;
-                width: 50%;
+                display: none;
             }
 
             .footer-title-and-menu-container {
@@ -306,7 +291,6 @@ export default {
 
         #footer-container-mid {
             @media (max-width: 899px) {
-                order: 1;
                 width: 100%;
             }
 
@@ -344,9 +328,19 @@ export default {
                         width: 40px;
                     }
 
-                    @media (max-width: 601px) {
+                    @media (max-width: 899px) {
+                        height: 50px;
+                        width: 50px;
+                    }
+
+                    @media (max-width: 499px) {
                         height: 40px;
                         width: 40px;
+                    }
+
+                    @media (max-width: 399px) {
+                        height: 38px;
+                        width: 38px;
                     }
 
                     .social-icon {
@@ -404,6 +398,10 @@ export default {
                 @media (max-width: 1099px) {
                     font-size: 18px;
                 }
+
+                @media (max-width: 399px) {
+                    font-size: 16px;
+                }
             }
 
             #owner {
@@ -435,8 +433,7 @@ export default {
 
         #footer-container-right {
             @media (max-width: 899px) {
-                order: 3;
-                width: 50%;
+                display: none;
             }
 
             .footer-title-and-menu-container {
