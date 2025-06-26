@@ -136,7 +136,7 @@ export default {
                     <div class="footer-title-container">
                         <span class="footer-title">DOVE SIAMO</span>
                     </div>
-                    <span class="footer-data">Via Santa Maria, 2 - 06010 Citerna (PG)</span>
+                    <span class="footer-data">Loc. Rosciano - 06010 Citerna (PG)</span>
                 </div>
             </div>
         </div>

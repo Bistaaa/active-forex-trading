@@ -49,7 +49,7 @@ export default {
                 {
                     question: `IL SERVIZIO DI COPY-TRADING AUTOMATICO NECESSITA DI TENERE SEMPRE IL PC ACCESO?`,
                     answer:
-                        `No, con il nostro Copy-trading non è necessario tenere il vostro PC sempre acceso (come la maggior parte richiedono): è sufficiente avere copertura Dati sul cellulare: infatti l’APP si scarica sul cellulare.`,
+                        `No, con il nostro Copy-trading non è necessario tenere il vostro PC sempre acceso (come la maggior parte richiedono): è sufficiente collegare il contro tramite un'app che si scarica sul cellulare.`,
                     active: false,
                 },
                 {
@@ -96,17 +96,18 @@ export default {
         </div>
     </div>
 </template>
-  
 
-  
 <style scoped lang="scss">
 #faq-overall-container {
     padding: 100px 10%;
+    background-color: rgba(255, 255, 255, 0.7);
 
     h2 {
-        margin-bottom: 50px;
+        margin-bottom: 70px;
         font-size: 55px;
         text-align: center;
+        color: #000;
+        text-decoration: underline;
     }
 
     #faqs-container {
@@ -118,14 +119,12 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
-                border-radius: 19px;
-                background: #d0edf0;
-                box-shadow: 5px 5px 10px #b7d1d3,
-                    -5px -5px 10px #e9ffff;
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
                 .faq-label-text {
-                    color: #365A5E;
+                    color: #000;
                     font-size: 20px;
                 }
 
@@ -136,15 +135,15 @@ export default {
                 }
 
                 .faq-label-icon {
-                    padding: 2px 3px;
-                    background: #d0edf0;
+                    padding: 0px 3px;
+                    background: #ECC01B;
                     border-radius: 6px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
                     .material-icons {
-                        color: #365A5E;
+                        color: #000;
                         transition: 0.3s ease;
                     }
                 }
@@ -154,12 +153,12 @@ export default {
                 transition: 0.3s ease;
                 margin-top: 15px;
                 height: 0;
-                border-radius: 6px;
-                color: rgba(127, 121, 121, 1);
+                border-radius: 10px;
+                color: #333;
                 overflow: hidden;
 
                 .faq-answer-content {
-                    padding: 10px 0 10px 15px;
+                    padding: 10px 15px;
                     font-size: 20px;
                 }
 
@@ -170,10 +169,11 @@ export default {
                 }
 
                 &.active {
-                    background: #FFFFFF;
-                    border: 1px solid #C7C4C4;
+                    background: #fff;
+                    border: 2px solid #ECC01B;
                     height: auto;
-                    margin-bottom: 25px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
 
                 &.rotate {
@@ -182,11 +182,11 @@ export default {
             }
         }
     }
-}
 
-@media screen and (max-width: 601px) {
-    #faq-overall-container {
-        padding: 100px 5%;
+    @media screen and (max-width: 601px) {
+        #faq-overall-container {
+            padding: 100px 5%;
+        }
     }
 }
 </style>
