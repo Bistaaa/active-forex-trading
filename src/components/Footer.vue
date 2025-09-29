@@ -2,25 +2,11 @@
 export default {
     name: 'Footer',
     data() {
-        return {
-
-        };
-    },
-    mounted() {
-        this.loadIubendaScript();
+        return {};
     },
     methods: {
-        loadIubendaScript() {
-            const script = document.createElement('script');
-            script.src = 'https://cdn.iubenda.com/iubenda.js';
-            script.async = true;
-
-            document.head.appendChild(script);
-        },
-
         scrollToElement(elementId) {
             this.$router.push('/');
-
             setTimeout(() => {
                 const element = document.getElementById(elementId);
                 if (element) {
@@ -28,7 +14,6 @@ export default {
                 }
             }, 300);
         },
-
         navigateTo(route) {
             this.$router.push(route);
         },
@@ -39,7 +24,6 @@ export default {
 <template>
     <div id="footer-container">
         <div id="upper-footer">
-
             <!-- LEFT COLUMN -->
             <div class="footer-column" id="footer-container-left">
                 <font-awesome-icon icon="fa-solid fa-address-book" class="footer-icon" />
@@ -69,7 +53,6 @@ export default {
                     </div>
                 </div>
             </div>
-
 
             <!-- MID COLUMN -->
             <div class="footer-column" id="footer-container-mid">
@@ -113,21 +96,11 @@ export default {
                 <span class="bottom-footer-info" id="owner">Active Forex Trading di Bistarelli Riccardo</span>
                 <span class="bottom-footer-info" id="owner-vat-number">P.IVA: 03832340545</span>
                 <div id="policies-container">
-
-                    <!-- Privacy Policy -->
-                    <a href="https://www.iubenda.com/privacy-policy/25318288"
-                        class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe"
-                        title="Privacy Policy">Privacy
-                        Policy</a>
-
-                    <!-- Cookie Policy -->
-                    <a href="https://www.iubenda.com/privacy-policy/25318288/cookie-policy"
-                        class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe"
-                        title="Cookie Policy">Cookie
-                        Policy</a>
+                    <a href="/documents/PRIVACY.pdf" target="_blank" class="policy-link">Privacy Policy</a>
+                    <a href="/documents/TERMINI.pdf" target="_blank" class="policy-link">Termini e Condizioni</a>
+                    <a href="/documents/COOKIE.pdf" target="_blank" class="policy-link">Cookie Policy</a>
                 </div>
             </div>
-
 
             <!-- RIGHT COLUMN -->
             <div class="footer-column" id="footer-container-right">
@@ -148,7 +121,6 @@ export default {
 
 <style scoped lang="scss">
 #footer-container {
-
     #upper-footer {
         background-color: #111111;
         padding: 40px 0;
@@ -181,9 +153,7 @@ export default {
             }
         }
 
-
         /* LEFT COLUMN */
-
         #footer-container-left {
             @media (max-width: 899px) {
                 display: none;
@@ -265,7 +235,6 @@ export default {
 
                     a {
                         text-decoration: none;
-
                     }
 
                     .footer-menu-row-data {
@@ -286,9 +255,7 @@ export default {
             }
         }
 
-
         /* MID COLUMN */
-
         #footer-container-mid {
             @media (max-width: 899px) {
                 width: 100%;
@@ -351,7 +318,6 @@ export default {
                         font-size: 20px;
                         color: #ffffff;
                     }
-
 
                     .social-icon:not(#facebook-icon) {
                         width: 50%;
@@ -425,12 +391,26 @@ export default {
             #policies-container {
                 display: flex;
                 gap: 10px;
+                justify-content: center;
+
+                .policy-link {
+                    color: #ffffff;
+                    text-decoration: underline;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #ECC01B;
+                    }
+
+                    @media (max-width: 1099px) {
+                        font-size: 15px;
+                    }
+                }
             }
         }
 
-
         /* RIGHT COLUMN */
-
         #footer-container-right {
             @media (max-width: 899px) {
                 display: none;
@@ -470,9 +450,7 @@ export default {
                     }
                 }
             }
-
         }
-
     }
 
     #bottom-informations {
